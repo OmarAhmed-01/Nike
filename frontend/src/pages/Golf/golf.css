@@ -1,0 +1,42 @@
+.golf-container{
+    display: flex;
+    width: 100%;
+    justify-content: start;
+}
+.golf-container .golf-products{
+    width: 100%;
+    display: flex;
+    padding: 50px;
+    flex-direction: column;
+    gap: 40px;
+}
+.golf-container .golf-products h1{
+    font-family: "Montserat", sans-serif;
+    font-size: 26px;
+}
+.golf-container .golf-products .product-cart{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.golf-list-item{
+    width: 445px;
+    display: flex;
+    flex-direction: column;
+}
+.golf-list-item img{
+    width: 445px;
+}
+.golf-container .golf-products .golf-list-item h1{
+    font-family: "Montserat", sans-serif;
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.golf-container .golf-products .golf-list-item h2{
+    font-family: "Montserat", sans-serif;
+    margin-top: 5px;
+    color: rgb(152, 152, 152);
+    font-size: 16px;
+    font-weight: 500;
+}

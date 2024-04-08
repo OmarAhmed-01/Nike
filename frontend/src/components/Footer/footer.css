@@ -1,0 +1,153 @@
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    background-color: black;
+}
+.footer-container .footer-details{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.resources ul{
+    list-style: none; 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.resources-list a{
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+}
+.help ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 3px;
+}
+.help h1{
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+}
+.help .help-list a{
+    color: rgb(150, 150, 150);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+}
+.help .help-list a:hover{
+    color: white;
+}
+.company ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 3px;
+}
+.company h1{
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+}
+.company .company-list a{
+    color: rgb(150, 150, 150);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+}
+.company .company-list a:hover{
+    color: white;
+}
+.promotions ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 3px;
+}
+.promotions h1{
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+}
+.promotions .promotion-list a{
+    color: rgb(150, 150, 150);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+}
+.promotions .promotion-list a:hover{
+    color: white;
+}
+.socials-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+    height: 50px;
+}
+.socials-list li{
+    width: 40px;
+    background-color: rgb(194, 194, 194);
+    border-radius: 99999px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.socials-list li:hover{
+    background-color: white;
+}
+.socials-list .image-container img{
+    margin-top: 3px;
+    margin-left: 1px;
+}
+.copyright{
+    display: flex;
+    width: 100%;
+}
+.copyright p{
+    width: 50%;
+    padding: 10px 70px;
+    color: rgb(150, 150, 150);
+    margin-top: 100px;
+    font-family: "Poppins", sans-serif;
+}
+.copyright-terms-items{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    width: 50%;
+    padding: 10px 100px;
+}
+.copyright-terms-items li{
+    list-style: none;
+}
+.copyright-terms-items a{
+    text-decoration: none;
+    color: rgb(150, 150, 150);
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+}
+.copyright-terms-items a:hover{
+    color: white;
+}

@@ -1,0 +1,89 @@
+.trending-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 40px;
+}
+.trending-container .trending-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.trending-container .trending-title-title{
+    width: 80%;
+    padding: 20px 50px;
+    font-size: 27px;
+    font-family: "Montserat", sans-serif;
+    font-weight: 500;
+}
+.trending-container .trending-title .trending-arrows {
+    display: flex;
+    flex-direction: row;
+    width: 20%;
+    gap: 10px;
+    padding-left: 130px;
+    padding-top: 10px;
+}
+.arrow-left{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(226, 226, 226);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.arrow-left:hover{
+    background-color: rgb(195, 195, 195);
+    transition: all 0.3s;
+}
+.arrow-right{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(226, 226, 226);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.arrow-right:hover{
+    background-color: rgb(195, 195, 195);
+    transition: all 0.3s;
+}
+.trending-container .trending-title .trending-arrows img{
+    width: 20px;
+    height: 20px;
+}
+.trending-cards{
+    padding: 20px 50px;
+    display: flex;
+    gap: 10px;
+    overflow-x: scroll;
+}
+.trending-cards::-webkit-scrollbar {
+    height: 10px;
+}
+.trending-cards::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+.trending-cards::-webkit-scrollbar-thumb {
+    background: #888;
+}
+.trending-cards .trending-list-item{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 30%;
+    height: 50%;
+}
+.trending-cards .trending-list-item p{
+    font-size: 20px;
+    font-weight: 500;
+    font-family: "Montserat", sans-serif;
+}
+
+
