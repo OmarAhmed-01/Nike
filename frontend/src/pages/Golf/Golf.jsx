@@ -15,7 +15,7 @@ const Golf = () => {
                                 <img src={item.img}/>
                                 <h1>Nike {item.label}</h1>
                                 <h2>{item.desc}</h2>
-                                <p>{item.colors.length} Color</p>
+                                <h3>{item.colors.length}Color</h3>
                                 <p>${item.price}</p>
                             </div>      
                         )
