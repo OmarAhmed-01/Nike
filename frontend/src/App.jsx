@@ -19,7 +19,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/w/golf-and-lifestyle' element={<Golf/>}/>
-          <Route path='/t' element={<Products/>}/>
+          <Route path='/t/:Product_ID' element={<Products/>}/>
         </Routes>
         <Footer/>
       </div>

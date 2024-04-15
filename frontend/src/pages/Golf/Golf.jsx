@@ -9,11 +9,11 @@ const Golf = () => {
     <div className=' golf-container'>
         <div className=' golf-products'>
             <h1>Golf and Lifestyle ({golf.length})</h1>
-            <div className=' product-cart' onClick={handleProductClick}>
+            <div className=' product-cart'>
                 {
                     golf.map((item, index) => {
                         return(
-                            <div className=' golf-list-item' key={index}>
+                            <div className=' golf-list-item' key={index} onClick={() => handleProductClick(item.id)}>
                                 <img src={item.img}/>
                                 <h1>Nike {item.label}</h1>
                                 <h2>{item.desc}</h2>

@@ -23,6 +23,7 @@
     width: 445px;
     display: flex;
     flex-direction: column;
+    cursor: pointer;
 }
 .golf-list-item img{
     width: 445px;
