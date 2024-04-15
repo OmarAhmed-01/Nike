@@ -1,0 +1,178 @@
+.product-container{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    justify-content: center;
+}
+.product-container .product-left{
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.product-container .product-left .small-images{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: scroll;
+    border-radius: 5px;
+    width: 300px;
+    height: auto;
+}
+.product-container .product-left .small-images::-webkit-scrollbar{
+    display: none;
+}
+.product-container .product-left .small-images img{
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+}
+.product-container .product-left .big-image img{
+    width: 100%;
+    border-radius: 10px;
+}
+.product-container .product-right{
+    width: 25%;
+    overflow-y: scroll;
+}
+.product-right .product-details{
+    padding: 10px;
+}
+.product-right .product-details h1{
+    font-size: 30px;
+    font-weight: 500;
+    font-family: "Montserat", sans-serif;
+}
+.product-right .product-details h2{
+    font-size: 20px;
+    font-family: "Montserat", sans-serif;
+    font-weight: 400;
+}
+.product-right .product-details p{
+    margin-top: 10px;
+    font-family: "Poppins";
+}
+.product-right .product-sizes{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-top: 30px;
+}
+.product-right .product-sizes .product-sizes-guide{
+    display: flex;
+    justify-content: space-between;
+}
+.product-right .product-sizes .product-sizes-guide h1{
+    font-family: "Poppins";
+    font-size: 16px;
+    font-weight: 500;
+}
+.product-right .product-sizes .product-sizes-guide h2{
+    font-family: "Poppins";
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(139, 139, 139);
+}
+.product-right .product-sizes .product-sizes-buttons{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 5%;
+}
+.product-right .product-sizes .product-sizes-buttons button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid rgb(203, 203, 203);
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    width: 30%;
+    height: 40px;
+    margin-top: 10px;
+    font-family: "Poppins";
+    font-size: 20px;
+}
+.product-right .product-sizes .product-sizes-buttons button:hover{
+    border: 1px solid rgb(0, 0, 0);
+}
+.product-right .order-button{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+}
+.product-right .order-button p{
+    text-align: center;
+    font-family: "Poppins";
+}
+.product-right .order-button span{
+    font-weight: 600;
+}
+.product-right .order-button .add-button{
+    width: 100%;
+    font-size: 20px;
+    height: 50px;
+    border-radius: 100px;
+    border: none;
+    background-color: black;
+    color: white;
+    font-family: "Poppins";
+    cursor: pointer;
+}
+.product-right .order-button .add-button:hover{
+    background-color: rgb(68, 68, 68);
+}
+.product-right .order-button .favourite-button{
+    width: 100%;
+    font-size: 20px;
+    height: 50px;
+    border-radius: 100px;
+    border: 1px solid rgb(203, 203, 203);
+    background-color: transparent;
+    color: black;
+    font-family: "Poppins";
+    cursor: pointer;
+}
+.product-right .order-button .favourite-button:hover{
+    border: 1px solid black;
+}
+.product-right .shipping{
+    padding: 10px;
+}
+.product-right .shipping h1{
+    margin-top: 20px;
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 16px;
+}
+.product-right .shipping p{
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 16px;
+    color: grey;
+}
+.product-right .desc{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.product-right .desc p{
+    font-family: "Poppins";
+    font-size: 16px;
+}
+.product-right .desc ul{
+    list-style: circle;
+}
+.product-right .desc li{
+    margin-top: 4px;
+    font-family: "Poppins";
+    color: black;
+}
+

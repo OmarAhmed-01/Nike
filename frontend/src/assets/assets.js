@@ -47,28 +47,63 @@ import white_gloves from './Tour_Classic_4.png'
 import golf_bag_grey from './Air_Hybrid_2.png'
 import golf_bag_black from './Performance_Cart.png' 
 
-// import bigShoe1d from './big-shoe1.png'
-// import bigShoe2d from './big-shoe2.png'
-// import bigShoe3d from './big-shoe3.png'
+//products
+import Tour_Classic_4_front from './Products/tour-classic-4/front.png'
+import Tour_Classic_4_back from './Products/tour-classic-4/back.png'
+//=================================================================//
+import dri_fit_adv_rise_front from './Products/dri-fit-adv-rise/front.png'
+import dri_fit_adv_rise_back from './Products/dri-fit-adv-rise/back.png'
+import dri_fit_adv_rise_dark from './Products/dri-fit-adv-rise/dark.png'
+//=================================================================//
+import air_hybrid_2_whole from './Products/air-hybrid-2/whole.png'
+import air_hybrid_2_side1 from './Products/air-hybrid-2/side1.png'
+import air_hybrid_2_side2 from './Products/air-hybrid-2/side2.png'
+import air_hybrid_2_side3 from './Products/air-hybrid-2/side3.png'
+import air_hybrid_2_side2Cover from './Products/air-hybrid-2/side2Cover.png'
+import air_hybrid_2_top from './Products/air-hybrid-2/top.jpg'
+import air_hybrid_2_side4 from './Products/air-hybrid-2/side4.jpg'
+import air_hybrid_2_side5 from './Products/air-hybrid-2/side5.png'
+import air_hybrid_2_side6 from './Products/air-hybrid-2/side6.jpg'
+import air_hybrid_2_side7 from './Products/air-hybrid-2/side7.jpg'
+import air_hybrid_2_closeUpLogo from './Products/air-hybrid-2/closeUpLogo.jpg'
+import air_hybrid_2_closeUp from './Products/air-hybrid-2/closeUp.jpg'
+import air_hybrid_2_pattern from './Products/air-hybrid-2/pattern.jpg'
+import air_hybrid_2_whole2 from './Products/air-hybrid-2/whole2.png'
+//=================================================================//
+import performance_cart_whole from './Products/performance-cart/whole.png'
+import performance_cart_side1 from './Products/performance-cart/side1.png'
+import performance_cart_side2 from './Products/performance-cart/side2.png'
+import performance_cart_side3 from './Products/performance-cart/side3.jpg'
+import performance_cart_side2Cover from './Products/performance-cart/side2Cover.png'
+import performance_cart_top from './Products/performance-cart/top.jpg'
+import performance_cart_side4 from './Products/performance-cart/side4.jpg'
+import performance_cart_side5 from './Products/performance-cart/side5.jpg'
+import performance_cart_side6 from './Products/performance-cart/side6.jpg'
+import performance_cart_pattern from './Products/performance-cart/pattern.jpg'
+import performance_cart_whole2 from './Products/performance-cart/whole2.png'
+//=================================================================//
+import air_zoom_infinity_tour_side1 from './Products/air-zoom-infinity-tour-NRG/side1.png'
+import air_zoom_infinity_tour_side2 from './Products/air-zoom-infinity-tour-NRG/side2.png'
+import air_zoom_infinity_tour_side3 from './Products/air-zoom-infinity-tour-NRG/side3.png'
+import air_zoom_infinity_tour_side4 from './Products/air-zoom-infinity-tour-NRG/side4.png'
+import air_zoom_infinity_tour_side5 from './Products/air-zoom-infinity-tour-NRG/side5.png'
+import air_zoom_infinity_tour_side6 from './Products/air-zoom-infinity-tour-NRG/side6.png'
+import air_zoom_infinity_tour_side7 from './Products/air-zoom-infinity-tour-NRG/side7.png'
+import air_zoom_infinity_tour_side8 from './Products/air-zoom-infinity-tour-NRG/side8.jpg'
+import air_zoom_infinity_tour_side9 from './Products/air-zoom-infinity-tour-NRG/side9.png'
+import air_zoom_infinity_tour_side10 from './Products/air-zoom-infinity-tour-NRG/side10.jpg'
+import air_zoom_infinity_tour_side11 from './Products/air-zoom-infinity-tour-NRG/side11.jpg'
+//=================================================================//
+import pegasus_89_side1 from './Products/pegasus-89/side1.png'
+import pegasus_89_side2 from './Products/pegasus-89/side2.png'
+import pegasus_89_side3 from './Products/pegasus-89/side3.png'
+import pegasus_89_side4 from './Products/pegasus-89/side4.png'
+import pegasus_89_side5 from './Products/pegasus-89/side5.png'
+import pegasus_89_side6 from './Products/pegasus-89/side6.png'
+import pegasus_89_side7 from './Products/pegasus-89/side7.png'
+import pegasus_89_side8 from './Products/pegasus-89/side8.png'
+import pegasus_89_side9 from './Products/pegasus-89/side9.jpg'
 
-// import customer1 from './customer1.jpeg'
-// import customer2 from './customer2.svg'
-
-// import footerLogo from './footer-logo.svg'
-// import headerLogo from './header-logo.svg'
-
-// import offer from './offer.svg'
-
-// import shoe4 from './shoe4.svg'
-// import shoe5 from './shoe5.svg'
-// import shoe6 from './shoe6.svg'
-// import shoe7 from './shoe7.svg'
-// import shoe8 from './shoe8.svg'
-
-// import thumbnailBackground from './thumbnail-background.svg'
-// import thumbnailShoe1 from './thumbnail-shoe1.svg'
-// import thumbnailShoe2 from './thumbnail-shoe2.svg'
-// import thumbnailShoe3 from './thumbnail-shoe3.svg'
 
 export const assets =  {
     logo,
@@ -91,6 +126,100 @@ export const assets =  {
     crossIcon,
     header_img1
 };
+export const products_images = {
+    Tour_Classic_4_front,
+    Tour_Classic_4_back
+};
+export const products = [
+    {
+        id: "golf1",
+        img: [dri_fit_adv_rise_front, dri_fit_adv_rise_back, dri_fit_adv_rise_dark],
+        label: "Dri-FIT ADV Rise",
+        desc: "Structured SwooshFlex Cap",
+        colors: ["White", "Green", "Blue", "Black"],
+        price: 32
+    },
+    {
+        id: "golf2", 
+        img: [Tour_Classic_4_front, Tour_Classic_4_back],
+        label: "Tour Classic 4",
+        desc: "Men's Golf Glove (Left Regular)",
+        colors: ["White"],
+        price: 24
+    },
+    {
+        id: "golf3", 
+        img: [air_hybrid_2_whole, 
+                air_hybrid_2_side1,
+                air_hybrid_2_side2,
+                air_hybrid_2_side3,
+                air_hybrid_2_side2Cover,
+                air_hybrid_2_side4,
+                air_hybrid_2_side5,
+                air_hybrid_2_side6,
+                air_hybrid_2_side7,
+                air_hybrid_2_closeUpLogo,
+                air_hybrid_2_closeUp,
+                air_hybrid_2_pattern,
+                air_hybrid_2_whole2],
+        label: "Air Hybrid 2",
+        desc: "Golf Bag",
+        colors: ["Grey"],
+        price: 280
+    },
+    {
+        id: "golf4", 
+        img: [performance_cart_whole,
+                performance_cart_side1,
+                performance_cart_side2,
+                performance_cart_side3,
+                performance_cart_side2Cover,
+                performance_cart_top,
+                performance_cart_side4,
+                performance_cart_side5,
+                performance_cart_side6,
+                performance_cart_pattern,
+                performance_cart_whole2],
+        label: "Performance Cart",
+        desc: "Golf Bag",
+        colors: ["Black"],
+        price: 270
+    },
+    {
+        id: "golf5", 
+        img: [air_zoom_infinity_tour_side1,
+                air_zoom_infinity_tour_side2,
+                air_zoom_infinity_tour_side3,
+                air_zoom_infinity_tour_side4,
+                air_zoom_infinity_tour_side5,
+                air_zoom_infinity_tour_side6,
+                air_zoom_infinity_tour_side7,
+                air_zoom_infinity_tour_side8,
+                air_zoom_infinity_tour_side9,
+                air_zoom_infinity_tour_side10,
+                air_zoom_infinity_tour_side11],
+        label: "Air Zoom Infinity Tour NRG",
+        desc: "Golf Shoes",
+        colors: ["Summit White"],
+        price: 190
+    },
+    {
+        id: "golf6", 
+        img: [pegasus_89_side1,
+                pegasus_89_side2,
+                pegasus_89_side3,
+                pegasus_89_side4,
+                pegasus_89_side5,
+                pegasus_89_side6,
+                pegasus_89_side7,
+                pegasus_89_side8,
+                pegasus_89_side9],
+        label: "Air Pegasus '89 G NRG",
+        desc: "Golf Shoes",
+        colors: ["Summit White"],
+        price: 140
+    }
+]
 export const trending = [
     {
         label: "Rep Your Team In March And Beyond",
@@ -185,6 +314,7 @@ export const socials = [
 
 export const golf =[
     {
+        id: "golf1",
         img: white_cap,
         label: "Dri-FIT ADV Rise",
         desc: "Structured SwooshFlex Cap",
@@ -192,6 +322,7 @@ export const golf =[
         price: 32
     },
     {
+        id: "golf2", 
         img: white_gloves,
         label: "Tour Classic 4",
         desc: "Men's Golf Glove (Left Regular)",
@@ -199,6 +330,7 @@ export const golf =[
         price: 24
     },
     {
+        id: "golf3", 
         img: golf_bag_grey,
         label: "Air Hybrid 2",
         desc: "Golf Bag",
@@ -206,6 +338,7 @@ export const golf =[
         price: 280
     },
     {
+        id: "golf4", 
         img: golf_bag_black,
         label: "Performance Cart",
         desc: "Golf Bag",
@@ -213,6 +346,7 @@ export const golf =[
         price: 270
     },
     {
+        id: "golf5", 
         img: AZIT,
         label: "Air Zoom Infinity Tour NRG",
         desc: "Golf Shoes",
@@ -220,6 +354,7 @@ export const golf =[
         price: 190
     },
     {
+        id: "golf6", 
         img: AP89,
         label: "Air Pegasus '89 G NRG",
         desc: "Golf Shoes",
@@ -227,12 +362,3 @@ export const golf =[
         price: 140
     }
 ]
-
-
-
-
-// export const nArrivals = {
-//     bigShoe1d,
-//     bigShoe2d,
-//     bigShoe3d
-// }

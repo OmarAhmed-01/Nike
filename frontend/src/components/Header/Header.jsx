@@ -1,14 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './header.css'
 import { assets } from '../../assets/assets'
 import { useNavigate } from 'react-router-dom'
+import { StoreContext } from '../../context/StoreContext'
 
 const Header = () => {
 
-  const navigate = useNavigate();
-  const handleGolfClick = () => {
-    navigate('/w/golf-and-lifestyle');
-  }
+  const { handleGolfClick } = useContext(StoreContext)
 
   return (
     <div className=' header-container'>
