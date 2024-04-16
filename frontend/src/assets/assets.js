@@ -18,6 +18,8 @@ import cart from './cart.svg'
 import search from './search.svg'
 import crossIcon from './cross_icon.png'
 import header_img1 from './header_img1.png'
+import heart from './heart.svg'
+import trash from './trash.svg'
 
 //trending
 import trending_img1 from './trending_img1.png'
@@ -124,7 +126,9 @@ export const assets =  {
     cart,
     search,
     crossIcon,
-    header_img1
+    header_img1,
+    heart,
+    trash,
 };
 export const products_images = {
     Tour_Classic_4_front,
@@ -137,7 +141,10 @@ export const products = [
         label: "Dri-FIT ADV Rise",
         desc: "Structured SwooshFlex Cap",
         colors: ["White", "Green", "Blue", "Black"],
-        price: 32
+        price: 32,
+        size: ["S/M", "M/L", "L/XL"],
+        category: ["Golf"],
+        gender:["Men", "Women"]
     },
     {
         id: "golf2", 
@@ -145,7 +152,10 @@ export const products = [
         label: "Tour Classic 4",
         desc: "Men's Golf Glove (Left Regular)",
         colors: ["White"],
-        price: 24
+        price: 24,
+        size: ["S", "M", "M/L", "L", "XL", "2XL"],
+        category:["Golf"],
+        gender:["Men", "Women"]
     },
     {
         id: "golf3", 
@@ -165,7 +175,10 @@ export const products = [
         label: "Air Hybrid 2",
         desc: "Golf Bag",
         colors: ["Grey"],
-        price: 280
+        price: 280,
+        size: [],
+        category: ["Golf"],
+        gender:["Men", "Women"]
     },
     {
         id: "golf4", 
@@ -183,7 +196,10 @@ export const products = [
         label: "Performance Cart",
         desc: "Golf Bag",
         colors: ["Black"],
-        price: 270
+        price: 270,
+        size: [],
+        category: ["Golf"],
+        gender:["Men", "Women"]
     },
     {
         id: "golf5", 
@@ -201,7 +217,10 @@ export const products = [
         label: "Air Zoom Infinity Tour NRG",
         desc: "Golf Shoes",
         colors: ["Summit White"],
-        price: 190
+        price: 190,
+        size: ["3.5","4","4.5","5","5.5","6","6.5","7","7.5","8","8.5","9","9.5","10","10.5","11","11.5","12","12.5","13","14","15","16"],
+        category: ["Golf"],
+        gender:["Men", "Women"]
     },
     {
         id: "golf6", 
@@ -217,7 +236,10 @@ export const products = [
         label: "Air Pegasus '89 G NRG",
         desc: "Golf Shoes",
         colors: ["Summit White"],
-        price: 140
+        price: 140,
+        size: ["3.5","4","4.5","5","5.5","6","6.5","7","7.5","8","8.5","9","9.5","10","10.5","11","11.5","12","12.5","13","14","15","16"],
+        category: ["Golf"],
+        gender:["Men", "Women"]
     }
 ]
 export const trending = [

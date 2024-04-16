@@ -1,14 +1,24 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import "./products.css";
 // import { products_images, products } from "../../assets/assets";
 import { StoreContext } from "../../context/StoreContext";
 import { useParams } from "react-router-dom";
 
 const Products = () => {
-  const { products } = useContext(StoreContext);
+  const { products, addToCart, handleSize } = useContext(StoreContext);
 
   const { Product_ID } = useParams();
   const product = products.find((item) => item.id === Product_ID);
+
+  const [bigImage, setBigImage] = useState(product.img[0]);
+
+  const handleImageHover = (image) => {
+    setBigImage(image);
+  };
+  const handleSizeClick = (selectedSize) => {
+    handleSize(selectedSize);
+    console.log(selectedSize);
+  };
 
   if (!product) {
     return <div>Product not found</div>;
@@ -21,7 +31,13 @@ const Products = () => {
           {/* Assuming you want to display the first image from the product */}
           {Array.isArray(product.img) ? (
             product.img.map((image, idx) => (
-              <img key={idx} src={image} alt={`Image ${idx + 1}`} />
+              <img
+                key={idx}
+                src={image}
+                alt={`Image ${idx + 1}`}
+                onMouseEnter={() => handleImageHover(image)}
+                className={image === bigImage ? "active" : ""}
+              />
             ))
           ) : (
             <img src={product.img} alt="Image" />
@@ -29,10 +45,7 @@ const Products = () => {
         </div>
         <div className="big-image">
           {/* Assuming you want to display the first image from the product */}
-          <img
-            src={Array.isArray(product.img) ? product.img[0] : product.img}
-            alt=""
-          />
+          <img src={bigImage} alt="" />
         </div>
       </div>
       <div className="product-right">
@@ -47,7 +60,13 @@ const Products = () => {
             <h2>Size Guide</h2>
           </div>
           <div className="product-sizes-buttons">
-            <button>S</button>
+            {product.size.map((item, index) => {
+              return (
+                <button key={index} onClick={() => handleSizeClick(item)}>
+                  {item.trim()}
+                </button>
+              );
+            })}
           </div>
         </div>
         <div className="order-button">
@@ -55,7 +74,7 @@ const Products = () => {
             4 interest-free payments. Available for orders above $35.{" "}
             <span>Klarna</span>
           </p>
-          <button className="add-button">Add to Bag</button>
+          <button className="add-button" onClick={() => addToCart(product.id)}>Add to Bag</button>
           <button className="favourite-button">Favourite</button>
         </div>
         <div className="shipping">

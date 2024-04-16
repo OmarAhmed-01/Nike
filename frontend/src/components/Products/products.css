@@ -175,4 +175,6 @@
     font-family: "Poppins";
     color: black;
 }
-
+.active{
+    border: 1px solid black;
+}

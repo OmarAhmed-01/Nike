@@ -6,6 +6,7 @@ import Home from './pages/Home/Home';
 import Golf from './pages/Golf/Golf';
 import Footer from './components/Footer/Footer';
 import Products from './components/Products/Products';
+import Cart from './pages/Cart/Cart';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
           <Route path='/' element={<Home/>}/>
           <Route path='/w/golf-and-lifestyle' element={<Golf/>}/>
           <Route path='/t/:Product_ID' element={<Products/>}/>
+          <Route path='/cart' element={<Cart/>}/>
         </Routes>
         <Footer/>
       </div>
