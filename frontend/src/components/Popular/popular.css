@@ -10,11 +10,16 @@
     justify-content: space-between;
 }
 .popular-container .popular-title-title{
-    width: 80%;
-    padding: 20px 50px;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.popular-container .popular-title-title h1{
+    font-family: "Poppins", sans-serif;
     font-size: 27px;
-    font-family: "Montserat", sans-serif;
     font-weight: 500;
+    padding-left: 3%;
 }
 .popular-container .popular-title .popular-arrows {
     display: flex;
@@ -59,7 +64,7 @@
     height: 20px;
 }
 .popular-cards{
-    padding: 20px 50px;
+    padding: 20px 2.5%;
     display: flex;
     gap: 10px;
     overflow-x: scroll;

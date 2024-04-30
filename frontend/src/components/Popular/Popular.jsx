@@ -28,7 +28,9 @@ const Popular = () => {
   return (
     <div className=' popular-container'>
         <div className=' popular-title'>
-            <div className=' popular-title-title'>Popular Right Now</div>
+            <div className=' popular-title-title'>
+                <h1>Popular Right Now</h1>
+            </div>
             <div className=' popular-arrows'>
                 <div className='arrow-left' onClick={handleScrollLeft}>
                     <img src={assets.arrowLeft}/>

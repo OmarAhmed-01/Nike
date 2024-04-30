@@ -7,6 +7,7 @@ import Golf from './pages/Golf/Golf';
 import Footer from './components/Footer/Footer';
 import Products from './components/Products/Products';
 import Cart from './pages/Cart/Cart';
+import Men from './pages/Men/Men';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
           <Route path='/w/golf-and-lifestyle' element={<Golf/>}/>
           <Route path='/t/:Product_ID' element={<Products/>}/>
           <Route path='/cart' element={<Cart/>}/>
+          <Route path='/men' element={<Men/>}/>
         </Routes>
         <Footer/>
       </div>

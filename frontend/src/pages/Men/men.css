@@ -1,0 +1,86 @@
+.men-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+.men-container .title{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 95%;
+}
+.men-container .title h1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    text-align: start;
+}
+.men-container .heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.men-container .heading img{
+    width: 95%;
+}
+.heading-details{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+.heading-details p{
+    font-family: sans-serif;
+    font-weight: 600;
+}
+.heading-details h1{
+    font-family: "Poppins";
+    font-size: 62px;
+}
+.heading-details h2{
+    font-size: 19px;
+    font-family: sans-serif;
+    font-weight: 300;
+}
+.heading-details button{
+    margin-top: 20px;
+    font-size: 20px;
+    padding: 10px 15px;
+    color: white;
+    background-color: black;
+    outline: none;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+}
+.heading-details button:hover{
+    background-color: rgb(54, 54, 54);
+}
+.men-container .essentials{
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+    width: 95%;
+}
+.men-container .essentials .items{
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.essentials-title h1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+}
+.clothing p, .shoes p, .accessories p{
+    margin-top: 10px;
+    font-size: 20px;
+    font-family: "Poppins";
+}
+.items img{
+    width: 100%;
+}
+.clothing, .shoes, .accessories{
+    cursor: pointer;
+}

@@ -43,6 +43,12 @@ import instagram from './instagram.svg'
 import twitter from './twitter.svg'
 import youtube from './youtube.svg'
 
+//men
+import heading from './Men/camavinga.png'
+import men_clothing from './Men/Clothing.png'
+import men_shoes from './Men/Shoes.png'
+import men_accessories from './Men/Accessories.png'
+
 //golf
 import white_cap from './Dri-Fit.png'
 import white_gloves from './Tour_Classic_4.png'
@@ -129,6 +135,10 @@ export const assets =  {
     header_img1,
     heart,
     trash,
+    heading,
+    men_clothing,
+    men_shoes,
+    men_accessories
 };
 export const products_images = {
     Tour_Classic_4_front,
