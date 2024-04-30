@@ -1,12 +1,13 @@
 import { createContext, useContext, useState } from "react";
 import { useNavigate, useParams } from 'react-router-dom'
 export const StoreContext = createContext(null);
-import { golf, products_images, products } from '../assets/assets'
+import { products_images, products } from '../assets/assets'
 
 const StoreContextProvider = (props) => {
 
   const [cartItem, setCartItems] = useState({});
   const [size, setSize] = useState("");
+  const [category, setCategory] = useState("");
 
   const addToCart = (itemId) => {
     if (!cartItem[itemId]) {
@@ -33,6 +34,18 @@ const StoreContextProvider = (props) => {
 
   const navigate = useNavigate();
 
+  const handleMenShoes = () => {
+    navigate('/w/mens-shoes');
+  }
+  const handleMenClothes = () => {
+    navigate('/w/mens-clothes')
+  }
+  const handleMenAccess = () => {
+    navigate('/w/mens-access')
+  }
+  const handleMenClick = () => {
+    navigate('/w/mens-shop');
+  }
   const handleGolfClick = () => {
     navigate('/w/golf-and-lifestyle');
   }
@@ -55,6 +68,10 @@ const StoreContextProvider = (props) => {
     cartItem,
     size,
     handleSize,
+    handleMenClick,
+    handleMenClothes,
+    handleMenShoes,
+    handleMenAccess
   }
 
   return (

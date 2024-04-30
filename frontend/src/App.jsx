@@ -8,6 +8,10 @@ import Footer from './components/Footer/Footer';
 import Products from './components/Products/Products';
 import Cart from './pages/Cart/Cart';
 import Men from './pages/Men/Men';
+import MensShop from './pages/Men/MensShop';
+import MenClothes from './pages/Men/MenClothes';
+import MenAccess from './pages/Men/MenAccess';
+import MenShoes from './pages/Men/MenShoes';
 
 function App() {
 
@@ -24,6 +28,10 @@ function App() {
           <Route path='/t/:Product_ID' element={<Products/>}/>
           <Route path='/cart' element={<Cart/>}/>
           <Route path='/men' element={<Men/>}/>
+          <Route path='/w/mens-shop' element={<MensShop/>}/>
+          <Route path='/w/mens-clothes' element={<MenClothes/>}/>
+          <Route path='/w/mens-shoes' element={<MenShoes/>}/>
+          <Route path='/w/mens-access' element={<MenAccess/>}/>
         </Routes>
         <Footer/>
       </div>

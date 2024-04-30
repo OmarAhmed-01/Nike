@@ -56,8 +56,8 @@ import golf_bag_grey from './Air_Hybrid_2.png'
 import golf_bag_black from './Performance_Cart.png' 
 
 //products
-import Tour_Classic_4_front from './Products/tour-classic-4/front.png'
-import Tour_Classic_4_back from './Products/tour-classic-4/back.png'
+import tour_classic_4_front from './Products/tour-classic-4/front.png'
+import tour_classic_4_back from './Products/tour-classic-4/back.png'
 //=================================================================//
 import dri_fit_adv_rise_front from './Products/dri-fit-adv-rise/front.png'
 import dri_fit_adv_rise_back from './Products/dri-fit-adv-rise/back.png'
@@ -68,7 +68,7 @@ import air_hybrid_2_side1 from './Products/air-hybrid-2/side1.png'
 import air_hybrid_2_side2 from './Products/air-hybrid-2/side2.png'
 import air_hybrid_2_side3 from './Products/air-hybrid-2/side3.png'
 import air_hybrid_2_side2Cover from './Products/air-hybrid-2/side2Cover.png'
-import air_hybrid_2_top from './Products/air-hybrid-2/top.jpg'
+// import air_hybrid_2_top from './Products/air-hybrid-2/top.jpg'
 import air_hybrid_2_side4 from './Products/air-hybrid-2/side4.jpg'
 import air_hybrid_2_side5 from './Products/air-hybrid-2/side5.png'
 import air_hybrid_2_side6 from './Products/air-hybrid-2/side6.jpg'
@@ -111,6 +111,25 @@ import pegasus_89_side6 from './Products/pegasus-89/side6.png'
 import pegasus_89_side7 from './Products/pegasus-89/side7.png'
 import pegasus_89_side8 from './Products/pegasus-89/side8.png'
 import pegasus_89_side9 from './Products/pegasus-89/side9.jpg'
+//=================================================================//
+import tech_fleece_windrunner_side1 from './Products/Tech-Fleece-Windrunner/1.png'
+import tech_fleece_windrunner_side2 from './Products/Tech-Fleece-Windrunner/2.jpg'
+import tech_fleece_windrunner_side3 from './Products/Tech-Fleece-Windrunner/3.jpg'
+import tech_fleece_windrunner_side4 from './Products/Tech-Fleece-Windrunner/4.jpg'
+import tech_fleece_windrunner_side5 from './Products/Tech-Fleece-Windrunner/5.jpg'
+import tech_fleece_windrunner_side6 from './Products/Tech-Fleece-Windrunner/6.jpg'
+import tech_fleece_windrunner_side7 from './Products/Tech-Fleece-Windrunner/7.jpg'
+import tech_fleece_windrunner_side8 from './Products/Tech-Fleece-Windrunner/8.png'
+//=================================================================//
+import air_force_1_side1 from './Products/Air-Force-One/1.png'
+import air_force_1_side2 from './Products/Air-Force-One/2.png'
+import air_force_1_side3 from './Products/Air-Force-One/3.png'
+import air_force_1_side4 from './Products/Air-Force-One/4.png'
+import air_force_1_side5 from './Products/Air-Force-One/5.png'
+//=================================================================//
+import icon_air_force_1_side1 from './Products/Icon_Air_Force_1/1.jpg'
+import icon_air_force_1_side2 from './Products/Icon_Air_Force_1/2.jpg'
+
 
 
 export const assets =  {
@@ -141,12 +160,12 @@ export const assets =  {
     men_accessories
 };
 export const products_images = {
-    Tour_Classic_4_front,
-    Tour_Classic_4_back
+    tour_classic_4_front,
+    tour_classic_4_back
 };
 export const products = [
     {
-        id: "golf1",
+        id: "dri_fit_adv_rise",
         img: [dri_fit_adv_rise_front, dri_fit_adv_rise_back, dri_fit_adv_rise_dark],
         label: "Dri-FIT ADV Rise",
         desc: "Structured SwooshFlex Cap",
@@ -154,21 +173,19 @@ export const products = [
         price: 32,
         size: ["S/M", "M/L", "L/XL"],
         category: ["Golf"],
-        gender:["Men", "Women"]
     },
     {
-        id: "golf2", 
-        img: [Tour_Classic_4_front, Tour_Classic_4_back],
+        id: "tour_classic_4", 
+        img: [tour_classic_4_front, tour_classic_4_back],
         label: "Tour Classic 4",
         desc: "Men's Golf Glove (Left Regular)",
         colors: ["White"],
         price: 24,
         size: ["S", "M", "M/L", "L", "XL", "2XL"],
         category:["Golf"],
-        gender:["Men", "Women"]
     },
     {
-        id: "golf3", 
+        id: "air_hybrid_2", 
         img: [air_hybrid_2_whole, 
                 air_hybrid_2_side1,
                 air_hybrid_2_side2,
@@ -188,10 +205,9 @@ export const products = [
         price: 280,
         size: [],
         category: ["Golf"],
-        gender:["Men", "Women"]
     },
     {
-        id: "golf4", 
+        id: "performance_cart", 
         img: [performance_cart_whole,
                 performance_cart_side1,
                 performance_cart_side2,
@@ -209,10 +225,9 @@ export const products = [
         price: 270,
         size: [],
         category: ["Golf"],
-        gender:["Men", "Women"]
     },
     {
-        id: "golf5", 
+        id: "air_zoom_infinity_tour", 
         img: [air_zoom_infinity_tour_side1,
                 air_zoom_infinity_tour_side2,
                 air_zoom_infinity_tour_side3,
@@ -230,10 +245,9 @@ export const products = [
         price: 190,
         size: ["3.5","4","4.5","5","5.5","6","6.5","7","7.5","8","8.5","9","9.5","10","10.5","11","11.5","12","12.5","13","14","15","16"],
         category: ["Golf"],
-        gender:["Men", "Women"]
     },
     {
-        id: "golf6", 
+        id: "pegasus_89", 
         img: [pegasus_89_side1,
                 pegasus_89_side2,
                 pegasus_89_side3,
@@ -249,7 +263,47 @@ export const products = [
         price: 140,
         size: ["3.5","4","4.5","5","5.5","6","6.5","7","7.5","8","8.5","9","9.5","10","10.5","11","11.5","12","12.5","13","14","15","16"],
         category: ["Golf"],
-        gender:["Men", "Women"]
+    },
+    {
+        id: "tech-fleece-windrunner",
+        img: [tech_fleece_windrunner_side1,
+                tech_fleece_windrunner_side2,
+                tech_fleece_windrunner_side3,
+                tech_fleece_windrunner_side4,
+                tech_fleece_windrunner_side5,
+                tech_fleece_windrunner_side6,
+                tech_fleece_windrunner_side7,
+                tech_fleece_windrunner_side8],
+        label: "Sportswear Tech Fleece Windrunner",
+        desc: "Men's Full-Zip Hoodie",
+        colors: ["Blue", "White", "Black", "Red", "Off-White"],
+        price: 145,
+        size: ["XS", "S", "S Tall", "M", "M Tall", "L", "L Tall", "XL", "XL Tall", "XXL", "XXL Tall", "3XL", "3XL Tall", "4XL", "4XL Tall"],
+        category: ["Men", "Clothing"],
+    },
+    {
+        id: "air-force-one-1'07",
+        img: [air_force_1_side1,
+                air_force_1_side2,
+                air_force_1_side3,
+                air_force_1_side4,
+                air_force_1_side5],
+        label: "Air Force 1 '07",
+        desc: "Men's Shoes",
+        colors: ["White", "Black"],
+        price: 115,
+        size: ["5","5.5","6","6.5","7","7.5","8","8.5","9","9.5","10","10.5","11","11.5","12","12.5","13","14","15","16","17","18"],
+        category: ["Men", "Women", "Shoes"],
+    },
+    {
+        id: "icon-air-force-one",
+        img: [icon_air_force_1_side1, icon_air_force_1_side2],
+        label: "Icon Air Force 1",
+        desc: "Card Wallet",
+        colors: ["Black", "White", "Brown", "Blue", "Red"],
+        price: 25,
+        size: [],
+        category: ["Accessories", "Men", "Women" ],
     }
 ]
 export const trending = [
@@ -344,53 +398,53 @@ export const socials = [
     }
 ];
 
-export const golf =[
-    {
-        id: "golf1",
-        img: white_cap,
-        label: "Dri-FIT ADV Rise",
-        desc: "Structured SwooshFlex Cap",
-        colors: ["White", "Green", "Blue", "Black"],
-        price: 32
-    },
-    {
-        id: "golf2", 
-        img: white_gloves,
-        label: "Tour Classic 4",
-        desc: "Men's Golf Glove (Left Regular)",
-        colors: ["White"],
-        price: 24
-    },
-    {
-        id: "golf3", 
-        img: golf_bag_grey,
-        label: "Air Hybrid 2",
-        desc: "Golf Bag",
-        colors: ["Grey"],
-        price: 280
-    },
-    {
-        id: "golf4", 
-        img: golf_bag_black,
-        label: "Performance Cart",
-        desc: "Golf Bag",
-        colors: ["Black"],
-        price: 270
-    },
-    {
-        id: "golf5", 
-        img: AZIT,
-        label: "Air Zoom Infinity Tour NRG",
-        desc: "Golf Shoes",
-        colors: ["Summit White"],
-        price: 190
-    },
-    {
-        id: "golf6", 
-        img: AP89,
-        label: "Air Pegasus '89 G NRG",
-        desc: "Golf Shoes",
-        colors: ["Summit White"],
-        price: 140
-    }
-]
+// export const golf =[
+//     {
+//         id: "golf1",
+//         img: white_cap,
+//         label: "Dri-FIT ADV Rise",
+//         desc: "Structured SwooshFlex Cap",
+//         colors: ["White", "Green", "Blue", "Black"],
+//         price: 32
+//     },
+//     {
+//         id: "golf2", 
+//         img: white_gloves,
+//         label: "Tour Classic 4",
+//         desc: "Men's Golf Glove (Left Regular)",
+//         colors: ["White"],
+//         price: 24
+//     },
+//     {
+//         id: "golf3", 
+//         img: golf_bag_grey,
+//         label: "Air Hybrid 2",
+//         desc: "Golf Bag",
+//         colors: ["Grey"],
+//         price: 280
+//     },
+//     {
+//         id: "golf4", 
+//         img: golf_bag_black,
+//         label: "Performance Cart",
+//         desc: "Golf Bag",
+//         colors: ["Black"],
+//         price: 270
+//     },
+//     {
+//         id: "golf5", 
+//         img: AZIT,
+//         label: "Air Zoom Infinity Tour NRG",
+//         desc: "Golf Shoes",
+//         colors: ["Summit White"],
+//         price: 190
+//     },
+//     {
+//         id: "golf6", 
+//         img: AP89,
+//         label: "Air Pegasus '89 G NRG",
+//         desc: "Golf Shoes",
+//         colors: ["Summit White"],
+//         price: 140
+//     }
+// ]

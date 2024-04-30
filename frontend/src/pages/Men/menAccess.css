@@ -1,54 +1,54 @@
-.golf-container{
+.men-accessories-container{
     display: flex;
     width: 100%;
     justify-content: start;
 }
-.golf-container .golf-products{
+.men-accessories-container .men-accessories-products{
     width: 100%;
     display: flex;
     padding: 50px;
     flex-direction: column;
     gap: 40px;
 }
-.golf-container .golf-products h1{
+.men-accessories-container .men-accessories-products h1{
     font-family: "Poppins", sans-serif;
     font-size: 26px;
 }
-.golf-container .golf-products .product-cart{
+.men-accessories-container .men-accessories-products .product-cart{
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
 }
-.golf-list-item{
+.men-accessories-list-item{
     width: 445px;
     display: flex;
     flex-direction: column;
     cursor: pointer;
 }
-.golf-list-item img{
+.men-accessories-list-item img{
     width: 445px;
 }
-.golf-container .golf-products .golf-list-item h1{
+.men-accessories-container .men-accessories-products .men-accessories-list-item h1{
     font-family: "Poppins", sans-serif;
     margin-top: 30px;
     font-size: 18px;
     font-weight: 500;
 }
-.golf-container .golf-products .golf-list-item h2{
+.men-accessories-container .men-accessories-products .men-accessories-list-item h2{
     font-family: "Poppins", sans-serif;
     margin-top: 5px;
     color: rgb(152, 152, 152);
     font-size: 16px;
     font-weight: 500;
 }
-.golf-container .golf-products .golf-list-item h3{
+.men-accessories-container .men-accessories-products .men-accessories-list-item h3{
     font-family: "Poppins", sans-serif;
     margin-top: 5px;
     color: rgb(152, 152, 152);
     font-size: 16px;
     font-weight: 500;
 }
-.golf-container .golf-products .golf-list-item p{
+.men-accessories-container .men-accessories-products .men-accessories-list-item p{
     font-family: "Poppins", sans-serif;
     margin-top: 10px;
     font-size: 20px;
