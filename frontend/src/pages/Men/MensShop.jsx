@@ -4,7 +4,7 @@ import { products } from '../../assets/assets';
 import { StoreContext } from '../../context/StoreContext';
 const MensShop = () => {
 
-    const { handleProductClick, category, setCategory } = useContext(StoreContext)
+    const { handleProductClick } = useContext(StoreContext)
     const MenProducts = products.filter(product => product.category.includes("Men"));
 
     // useEffect(() => {

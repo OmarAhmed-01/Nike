@@ -137,6 +137,15 @@ import air_force_1_side5 from './Products/Air-Force-One/5.png'
 //=================================================================//
 import icon_air_force_1_side1 from './Products/Icon_Air_Force_1/1.jpg'
 import icon_air_force_1_side2 from './Products/Icon_Air_Force_1/2.jpg'
+//=================================================================//
+import one_convertible_side1 from './Products/One-Convertible/1.png'
+import one_convertible_side2 from './Products/One-Convertible/2.jpg'
+import one_convertible_side3 from './Products/One-Convertible/3.png'
+//=================================================================//
+import phoenix_fleece_side1 from './Products/Sportswear-Phoenix-Fleece/1.jpg'
+import phoenix_fleece_side2 from './Products/Sportswear-Phoenix-Fleece/2.jpg'
+import phoenix_fleece_side3 from './Products/Sportswear-Phoenix-Fleece/3.jpg'
+
 
 
 
@@ -302,7 +311,7 @@ export const products = [
                 air_force_1_side4,
                 air_force_1_side5],
         label: "Air Force 1 '07",
-        desc: "Men's Shoes",
+        desc: "Shoes",
         colors: ["White", "Black"],
         price: 115,
         size: ["5","5.5","6","6.5","7","7.5","8","8.5","9","9.5","10","10.5","11","11.5","12","12.5","13","14","15","16","17","18"],
@@ -317,6 +326,26 @@ export const products = [
         price: 25,
         size: [],
         category: ["Accessories", "Men", "Women" ],
+    },
+    {
+        id: "one-convertible",
+        img: [one_convertible_side1, one_convertible_side2, one_convertible_side3],
+        label: "One Convertible",
+        desc: "Women's Light-Support Lightly Lined Longline",
+        colors: ["White", "Purple", "Black"],
+        price: 45,
+        size: ["XS", "S", "M", "L", "XL", "2XL"],
+        category: ["Women", "Bras"]
+    },
+    {
+        id: "sportswear-phoenix-fleece",
+        img: [phoenix_fleece_side1, phoenix_fleece_side2, phoenix_fleece_side3],
+        label: "Sportswear Phoenix Fleece",
+        desc: "Women's 1/2-Zip Cropped Sweatshirt",
+        colors: [],
+        price: 80,
+        size: ["XS(0-2)", "S(4-6)", "M(8-10)", "L(12-14)", "XL(16-18)", "2XL(20-22)"],
+        category: ["Women", "Clothing"]
     }
 ]
 export const trending = [

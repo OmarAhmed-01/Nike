@@ -13,6 +13,11 @@ import MenClothes from './pages/Men/MenClothes';
 import MenAccess from './pages/Men/MenAccess';
 import MenShoes from './pages/Men/MenShoes';
 import Women from './pages/Women/Women';
+import WomenShop from './pages/Women/WomenShop';
+import WomenShoes from './pages/Women/WomenShoes';
+import WomenClothing from './pages/Women/WomenClothing';
+import WomenAccess from './pages/Women/WomenAccess';
+import WomenBrasLeggings from './pages/Women/WomenBras';
 
 function App() {
 
@@ -36,11 +41,12 @@ function App() {
           <Route path='/w/men-access' element={<MenAccess/>}/>
           //======================================//
           <Route path='/women' element={<Women/>}/>
-          <Route path='/w/women-shop' element/>
-          <Route path='/w/women-clothes' element/>
-          <Route path='/w/women-shoes' element/>
-          <Route path='/w/women-access' element/>
-          <Route path='/w/women-bras' element/>
+          <Route path='/w/women-shop' element={<WomenShop/>}/>
+          <Route path='/w/women-clothes' element={<WomenClothing/>}/>
+          <Route path='/w/women-shoes' element={<WomenShoes/>}/>
+          <Route path='/w/women-access' element={<WomenAccess/>}/>
+          <Route path='/w/women-bras-leggings' element={<WomenBrasLeggings/>}/>
+          //======================================//
         </Routes>
         <Footer/>
       </div>
