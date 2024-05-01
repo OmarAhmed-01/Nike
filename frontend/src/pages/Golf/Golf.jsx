@@ -1,31 +1,54 @@
 import React, { useContext } from 'react'
 import './golf.css'
-import { products } from '../../assets/assets'
+import { assets } from '../../assets/assets'
 import { StoreContext } from '../../context/StoreContext'
+import Popular from '../../components/Popular/Popular'
 
 const Golf = () => {
-    const { handleProductClick } = useContext(StoreContext)
-    const golfProducts = products.filter(product => product.category.includes("Golf"));
+
+    const { handleGolfClick } = useContext(StoreContext)
+    
   return (
-    <div className=' golf-container'>
-        <div className=' golf-products'>
-            <h1>Golf and Lifestyle ({golfProducts.length})</h1>
-            <div className=' product-cart'>
-                {
-                    golfProducts.map((item, index) => {
-                        return(
-                            <div className=' golf-list-item' key={index} onClick={() => handleProductClick(item.id)}>
-                                <img src={item.img[0]}/>
-                                <h1>Nike {item.label}</h1>
-                                <h2>{item.desc}</h2>
-                                <h3>{item.colors.length} Colors</h3>
-                                <p>${item.price}</p>
-                            </div>      
-                        )
-                    })
-                }
+    <div className='golf-container'>
+        <div className="title">
+            <h1>Golf</h1>
+        </div>
+        <div className="heading" onClick={handleGolfClick}>
+            <img src={assets.golf_header} alt="" />
+            <div className='heading-details'>
+                <h1>BROOK'S PICKS</h1>
+                <h2>Explore the latest must-haves handpicked by pro golfer Brooks Koepka --on and off course.</h2>
+                <button onClick={handleGolfClick}>Shop All</button>
             </div>
         </div>
+        <div className="essential">
+            <div className='essential-title'>
+                <h1>Popular Right Now</h1>
+            </div>
+            <div className="golf-items">
+                <div className="items-left">
+                    <div className='golf-clothing'>
+                        <p>Apparel</p>
+                        <button>Shop</button>
+                    </div>
+                    <div className='golf-accessories'>
+                        <p>Accessories & Equipment</p>
+                        <button>Shop</button>
+                    </div>
+                </div>
+                <div className='items-right'>
+                    <div className='footwear'>
+                        <p>Footwear</p>
+                        <button>Shop</button>
+                    </div>
+                    <div className='inspired'>
+                        <p>Inspired by<br/>The Pros</p>
+                        <button>Shop</button>
+                    </div>
+                </div>  
+            </div>
+        </div>
+        <Popular/>
     </div>
   )
 }

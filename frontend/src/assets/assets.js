@@ -58,10 +58,11 @@ import women_bras_leggings from './Women/Bras_Leggings.png'
 
 
 //golf
-import white_cap from './Dri-Fit.png'
-import white_gloves from './Tour_Classic_4.png'
-import golf_bag_grey from './Air_Hybrid_2.png'
-import golf_bag_black from './Performance_Cart.png' 
+import golf_header from './Golf/Brook-Header.png'
+import apparel from './Golf/apparel.jpg'
+import equipment from './Golf/Equipment.png'
+import shoes from './Golf/Shoes.jpg'
+import background from './Golf/background.jpg'
 
 //products
 import tour_classic_4_front from './Products/tour-classic-4/front.png'
@@ -179,7 +180,12 @@ export const assets =  {
     women_clothing,
     women_shoes,
     women_accessories,
-    women_bras_leggings
+    women_bras_leggings,
+    golf_header,
+    apparel,
+    equipment,
+    shoes,
+    background
 };
 export const products_images = {
     tour_classic_4_front,

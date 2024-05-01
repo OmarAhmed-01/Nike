@@ -1,56 +1,129 @@
 .golf-container{
     display: flex;
     width: 100%;
-    justify-content: start;
-}
-.golf-container .golf-products{
-    width: 100%;
-    display: flex;
-    padding: 50px;
     flex-direction: column;
-    gap: 40px;
+    align-items: center;
 }
-.golf-container .golf-products h1{
+.golf-container .title{
+    padding: 15px 0px;
+    width: 95%;
+}
+.golf-container .title h1{
     font-family: "Poppins", sans-serif;
-    font-size: 26px;
+    font-weight: 400;
+    text-align: start;
 }
-.golf-container .golf-products .product-cart{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-}
-.golf-list-item{
-    width: 445px;
+.golf-container .heading{
     display: flex;
     flex-direction: column;
+    align-items: center;
     cursor: pointer;
 }
-.golf-list-item img{
-    width: 445px;
+.golf-container .heading img{
+    width: 95%;
 }
-.golf-container .golf-products .golf-list-item h1{
+.essential{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    width: 95%;
+}
+.essential .essential-title{
+    padding: 15px 0px;
+}
+.essential-title h1{
+    text-align: start;
     font-family: "Poppins", sans-serif;
-    margin-top: 30px;
+
+}
+.essential .golf-items{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.golf-items .items-left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.golf-items .items-right{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.golf-clothing p{
+    color: white;
     font-size: 18px;
-    font-weight: 500;
-}
-.golf-container .golf-products .golf-list-item h2{
     font-family: "Poppins", sans-serif;
-    margin-top: 5px;
-    color: rgb(152, 152, 152);
+    top: 40px;
+    right: 20px;
+    position: absolute;
+}
+.golf-accessories p{
+    color: white;
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    top: 40px;
+    right: 20px;
+    position: absolute;
+}
+.footwear p{
+    color: white;
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    top: 40px;
+    right: 20px;
+    position: absolute;
+}
+.inspired p {
+    color: white;
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    top: 40px;
+    right: 20px;
+    position: absolute;
+}
+.golf-clothing button, .golf-accessories button, .footwear button, .inspired button{
+    position: absolute;
+    top: 100px;
+    right: 20px;
     font-size: 16px;
-    font-weight: 500;
+    padding: 9px 17px;
+    border: none;
+    outline: none;
+    border-radius: 100px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
 }
-.golf-container .golf-products .golf-list-item h3{
-    font-family: "Poppins", sans-serif;
-    margin-top: 5px;
-    color: rgb(152, 152, 152);
-    font-size: 16px;
-    font-weight: 500;
+.golf-clothing button:hover, .golf-accessories button:hover, .footwear button:hover, .inspired button:hover{
+    background-color: rgb(189, 189, 189);
 }
-.golf-container .golf-products .golf-list-item p{
-    font-family: "Poppins", sans-serif;
-    margin-top: 10px;
-    font-size: 20px;
-    font-weight: 500;
+.items-left .golf-clothing{
+    height: 800px;
+    position: relative;
+    background: no-repeat url("../../assets/Golf/apparel.jpg");
+    background-size: cover;
+}
+.items-left .golf-accessories{
+    position: relative;
+    background: no-repeat url("../../assets/Golf/Equipment.png");
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+}
+.items-right .footwear{
+    position: relative;
+    background: no-repeat url("../../assets/Golf/Shoes.jpg");
+    height: 500px;
+    background-size: cover;
+}
+.items-right .inspired{
+    position: relative;
+    background: no-repeat url("../../assets/Golf/background.jpg");
+    height: 800px;
+    background-size: cover;
+    background-position: center;
 }

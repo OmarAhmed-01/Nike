@@ -18,6 +18,7 @@ import WomenShoes from './pages/Women/WomenShoes';
 import WomenClothing from './pages/Women/WomenClothing';
 import WomenAccess from './pages/Women/WomenAccess';
 import WomenBrasLeggings from './pages/Women/WomenBras';
+import GolfShop from './pages/Golf/GolfShop';
 
 function App() {
 
@@ -30,7 +31,6 @@ function App() {
         <Navbar setShowLogin={setShowLogin}/>
         <Routes>
           <Route path='/' element={<Home/>}/>
-          <Route path='/w/golf-and-lifestyle' element={<Golf/>}/>
           <Route path='/t/:Product_ID' element={<Products/>}/>
           <Route path='/cart' element={<Cart/>}/>
           //======================================//
@@ -47,6 +47,8 @@ function App() {
           <Route path='/w/women-access' element={<WomenAccess/>}/>
           <Route path='/w/women-bras-leggings' element={<WomenBrasLeggings/>}/>
           //======================================//
+          <Route path='/golf' element={<Golf/>}/>
+          <Route path='/w/golf-and-lifestyle' element={<GolfShop/>}/>
         </Routes>
         <Footer/>
       </div>
