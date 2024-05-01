@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useRef } from "react";
 import { useNavigate, useParams } from 'react-router-dom'
 export const StoreContext = createContext(null);
 import { products_images, products } from '../assets/assets'
@@ -32,20 +32,54 @@ const StoreContextProvider = (props) => {
     return totalAmount;
   };
 
-  const navigate = useNavigate();
+  const handleScrollLeft = (ref) => {
+    if (ref.current) {
+        ref.current.scrollTo({
+        left: ref.current.scrollLeft - 600, // Adjust the scroll distance as needed
+        behavior: 'smooth' // Smooth scrolling
+        });
+    }
+};
 
+const handleScrollRight = (ref) => {
+    if (ref.current) {
+      ref.current.scrollTo({
+        left: ref.current.scrollLeft + 600, // Adjust the scroll distance as needed
+        behavior: 'smooth' // Smooth scrolling
+        });
+    }
+};
+
+  const navigate = useNavigate();
+  const handleWomenClick = () =>{
+    navigate('/w/women-shop')
+  }
+  const handleWomenClothes = () => {
+    navigate('/w/women-clothes')
+  }
+  const handleWomenShoes = () => {
+    navigate('/w/women-shoes')
+  }
+  const handleWomenAccess = () => {
+    navigate('/w/women-access')
+  }
+  const handleWomenBras = () => {
+    navigate('/w/women-bras-leggings')
+  }
+  //====================================//
   const handleMenShoes = () => {
-    navigate('/w/mens-shoes');
+    navigate('/w/men-shoes');
   }
   const handleMenClothes = () => {
-    navigate('/w/mens-clothes')
+    navigate('/w/men-clothes')
   }
   const handleMenAccess = () => {
-    navigate('/w/mens-access')
+    navigate('/w/men-access')
   }
   const handleMenClick = () => {
-    navigate('/w/mens-shop');
+    navigate('/w/men-shop');
   }
+  //====================================//
   const handleGolfClick = () => {
     navigate('/w/golf-and-lifestyle');
   }
@@ -59,6 +93,8 @@ const StoreContextProvider = (props) => {
 
 
   const contextValue = {
+    handleScrollLeft,
+    handleScrollRight,
     handleGolfClick,
     handleProductClick,
     products,
@@ -71,7 +107,12 @@ const StoreContextProvider = (props) => {
     handleMenClick,
     handleMenClothes,
     handleMenShoes,
-    handleMenAccess
+    handleMenAccess,
+    handleWomenClick,
+    handleWomenClothes,
+    handleWomenShoes,
+    handleWomenAccess,
+    handleWomenBras
   }
 
   return (

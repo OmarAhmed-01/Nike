@@ -3,7 +3,6 @@ import "./men.css"
 import { assets } from '../../assets/assets'
 import Popular from '../../components/Popular/Popular'
 import { StoreContext } from '../../context/StoreContext'
-import { useNavigate } from 'react-router-dom'
 
 const Men = () => {
 

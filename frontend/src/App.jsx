@@ -12,6 +12,7 @@ import MensShop from './pages/Men/MensShop';
 import MenClothes from './pages/Men/MenClothes';
 import MenAccess from './pages/Men/MenAccess';
 import MenShoes from './pages/Men/MenShoes';
+import Women from './pages/Women/Women';
 
 function App() {
 
@@ -27,11 +28,19 @@ function App() {
           <Route path='/w/golf-and-lifestyle' element={<Golf/>}/>
           <Route path='/t/:Product_ID' element={<Products/>}/>
           <Route path='/cart' element={<Cart/>}/>
+          //======================================//
           <Route path='/men' element={<Men/>}/>
-          <Route path='/w/mens-shop' element={<MensShop/>}/>
-          <Route path='/w/mens-clothes' element={<MenClothes/>}/>
-          <Route path='/w/mens-shoes' element={<MenShoes/>}/>
-          <Route path='/w/mens-access' element={<MenAccess/>}/>
+          <Route path='/w/men-shop' element={<MensShop/>}/>
+          <Route path='/w/men-clothes' element={<MenClothes/>}/>
+          <Route path='/w/men-shoes' element={<MenShoes/>}/>
+          <Route path='/w/men-access' element={<MenAccess/>}/>
+          //======================================//
+          <Route path='/women' element={<Women/>}/>
+          <Route path='/w/women-shop' element/>
+          <Route path='/w/women-clothes' element/>
+          <Route path='/w/women-shoes' element/>
+          <Route path='/w/women-access' element/>
+          <Route path='/w/women-bras' element/>
         </Routes>
         <Footer/>
       </div>

@@ -1,0 +1,140 @@
+.women-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+.women-container .title{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 95%;
+}
+.women-container .title h1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    text-align: start;
+}
+.women-container .heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+.women-container .heading img{
+    width: 95%;
+}
+.heading-details{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+.heading-details p{
+    font-family: sans-serif;
+    font-weight: 600;
+}
+.heading-details h1{
+    font-family: "Poppins";
+    font-size: 62px;
+}
+.heading-details h2{
+    font-size: 19px;
+    font-family: sans-serif;
+    font-weight: 300;
+}
+.heading-details button{
+    margin-top: 20px;
+    font-size: 20px;
+    padding: 10px 15px;
+    color: white;
+    background-color: black;
+    outline: none;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+}
+.heading-details button:hover{
+    background-color: rgb(54, 54, 54);
+}
+.women-container .essentials{
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+    width: 100%;
+}
+.women-container .essentials .items{
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+    cursor: pointer;
+    overflow-x: scroll;
+    padding-left: 2.5%;
+}
+.clothing img, .shoes img, .accessories img, .bras img{
+    width: 450px;
+    cursor: pointer;
+}
+.essential-title{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2.5%;
+    align-items: center;
+}
+.essential-title h1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+}
+.clothing p, .shoes p, .accessories p, .bras p{
+    margin-top: 10px;
+    font-size: 20px;
+    font-family: "Poppins";
+}
+.clothing, .shoes, .accessories, .bras{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.popular-arrows {
+    display: flex;
+    flex-direction: row;
+    width: 20%;
+    gap: 10px;
+    padding-left: 130px;
+    padding-top: 10px;
+}
+.arrow-left{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(226, 226, 226);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.arrow-left:hover{
+    background-color: rgb(195, 195, 195);
+    transition: all 0.3s;
+}
+.arrow-right{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(226, 226, 226);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.arrow-right:hover{
+    background-color: rgb(195, 195, 195);
+    transition: all 0.3s;
+} 
+.popular-arrows img{
+    width: 20px;
+    height: 20px;
+}

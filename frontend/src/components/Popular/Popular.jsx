@@ -1,29 +1,12 @@
-import React, { useRef, useState } from 'react'
+import React, { useContext, useRef, useState } from 'react'
 import './popular.css'
 import { assets, popular } from '../../assets/assets'
+import { StoreContext } from '../../context/StoreContext'
 
 const Popular = () => {
 
-    const [scrollPosition, setScrollPosition] = useState(0);
-    const popularRef = useRef(null);
-
-    const handleScrollLeft = () => {
-        if (popularRef.current) {
-            popularRef.current.scrollTo({
-            left: popularRef.current.scrollLeft - 600, // Adjust the scroll distance as needed
-            behavior: 'smooth' // Smooth scrolling
-            });
-        }
-    };
-    
-    const handleScrollRight = () => {
-        if (popularRef.current) {
-          popularRef.current.scrollTo({
-            left: popularRef.current.scrollLeft + 600, // Adjust the scroll distance as needed
-            behavior: 'smooth' // Smooth scrolling
-            });
-        }
-    };
+    const { handleScrollLeft, handleScrollRight } = useContext(StoreContext)
+    const scrollRef = useRef(null);
 
   return (
     <div className=' popular-container'>
@@ -32,15 +15,15 @@ const Popular = () => {
                 <h1>Popular Right Now</h1>
             </div>
             <div className=' popular-arrows'>
-                <div className='arrow-left' onClick={handleScrollLeft}>
+                <div className='arrow-left' onClick={() => handleScrollLeft(scrollRef)}>
                     <img src={assets.arrowLeft}/>
                 </div>
-                <div className=' arrow-right' onClick={handleScrollRight}>
+                <div className=' arrow-right' onClick={() => handleScrollRight(scrollRef)}>
                     <img src={assets.arrowRight}/>
                 </div>
             </div>
         </div>
-        <div className=' popular-cards' ref={popularRef}>
+        <div className=' popular-cards' ref={scrollRef}>
             {
                 popular.map((item, index) => {
                     return(

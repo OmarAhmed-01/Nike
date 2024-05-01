@@ -5,8 +5,7 @@
     align-items: center;
 }
 .men-container .title{
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding: 15px 0px;
     width: 95%;
 }
 .men-container .title h1{
@@ -65,6 +64,7 @@
 }
 .men-container .essentials .items{
     display: flex;
+    justify-content: space-between;
     gap: 10px;
     margin-top: 30px;
     cursor: pointer;

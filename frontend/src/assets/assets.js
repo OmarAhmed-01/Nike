@@ -49,6 +49,14 @@ import men_clothing from './Men/Clothing.png'
 import men_shoes from './Men/Shoes.png'
 import men_accessories from './Men/Accessories.png'
 
+//women
+import women_heading from './Women/women_header.jpg'
+import women_clothing from './Women/Clothing.png'
+import women_shoes from './Women/Shoes.png'
+import women_accessories from './Women/Accessories.png'
+import women_bras_leggings from './Women/Bras_Leggings.png'
+
+
 //golf
 import white_cap from './Dri-Fit.png'
 import white_gloves from './Tour_Classic_4.png'
@@ -157,7 +165,12 @@ export const assets =  {
     heading,
     men_clothing,
     men_shoes,
-    men_accessories
+    men_accessories,
+    women_heading,
+    women_clothing,
+    women_shoes,
+    women_accessories,
+    women_bras_leggings
 };
 export const products_images = {
     tour_classic_4_front,
