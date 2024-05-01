@@ -19,6 +19,10 @@ import WomenClothing from './pages/Women/WomenClothing';
 import WomenAccess from './pages/Women/WomenAccess';
 import WomenBrasLeggings from './pages/Women/WomenBras';
 import GolfShop from './pages/Golf/GolfShop';
+import GolfApparels from './pages/Golf/GolfApparels';
+import GolfShoes from './pages/Golf/GolfShoes';
+import GolfEquipment from './pages/Golf/GolfEquipment';
+import GolfPros from './pages/Golf/GolfPros';
 
 function App() {
 
@@ -49,6 +53,10 @@ function App() {
           //======================================//
           <Route path='/golf' element={<Golf/>}/>
           <Route path='/w/golf-and-lifestyle' element={<GolfShop/>}/>
+          <Route path='/w/golf-clothing' element={<GolfApparels/>}/>
+          <Route path='/w/golf-shoes' element={<GolfShoes/>}/>
+          <Route path='/w/golf-accessories-equipment' element={<GolfEquipment/>}/>
+          <Route path='/w/golf-pros' element={<GolfPros/>}/>
         </Routes>
         <Footer/>
       </div>

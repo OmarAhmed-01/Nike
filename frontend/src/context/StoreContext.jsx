@@ -83,6 +83,19 @@ const handleScrollRight = (ref) => {
   const handleGolfClick = () => {
     navigate('/w/golf-and-lifestyle');
   }
+  const handleGolfApparel = () => {
+    navigate('/w/golf-clothing')
+  }
+  const handleGolfEquipment = () => {
+    navigate('/w/golf-accessories-equipment')
+  }
+  const handleGolfShoes = () => {
+    navigate('/w/golf-shoes')
+  }
+  const handleGolfPros = () => {
+    navigate('/w/golf-pros')
+  }
+  //====================================//
   const handleProductClick = (Product_ID) => {
     navigate(`/t/${Product_ID}`);
   }
@@ -112,7 +125,11 @@ const handleScrollRight = (ref) => {
     handleWomenClothes,
     handleWomenShoes,
     handleWomenAccess,
-    handleWomenBras
+    handleWomenBras,
+    handleGolfApparel,
+    handleGolfEquipment,
+    handleGolfShoes,
+    handleGolfPros
   }
 
   return (

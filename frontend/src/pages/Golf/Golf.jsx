@@ -6,7 +6,7 @@ import Popular from '../../components/Popular/Popular'
 
 const Golf = () => {
 
-    const { handleGolfClick } = useContext(StoreContext)
+    const { handleGolfClick, handleGolfApparel, handleGolfShoes, handleGolfPros, handleGolfEquipment } = useContext(StoreContext)
     
   return (
     <div className='golf-container'>
@@ -29,21 +29,21 @@ const Golf = () => {
                 <div className="items-left">
                     <div className='golf-clothing'>
                         <p>Apparel</p>
-                        <button>Shop</button>
+                        <button onClick={handleGolfApparel}>Shop</button>
                     </div>
                     <div className='golf-accessories'>
                         <p>Accessories & Equipment</p>
-                        <button>Shop</button>
+                        <button onClick={handleGolfEquipment}>Shop</button>
                     </div>
                 </div>
                 <div className='items-right'>
                     <div className='footwear'>
                         <p>Footwear</p>
-                        <button>Shop</button>
+                        <button onClick={handleGolfShoes}>Shop</button>
                     </div>
                     <div className='inspired'>
                         <p>Inspired by<br/>The Pros</p>
-                        <button>Shop</button>
+                        <button onClick={handleGolfPros}>Shop</button>
                     </div>
                 </div>  
             </div>

@@ -200,7 +200,7 @@ export const products = [
         colors: ["White", "Green", "Blue", "Black"],
         price: 32,
         size: ["S/M", "M/L", "L/XL"],
-        category: ["Golf"],
+        category: ["Golf", "Pro"],
     },
     {
         id: "tour_classic_4", 
@@ -210,7 +210,7 @@ export const products = [
         colors: ["White"],
         price: 24,
         size: ["S", "M", "M/L", "L", "XL", "2XL"],
-        category:["Golf"],
+        category:["Golf", "Pro"],
     },
     {
         id: "air_hybrid_2", 
@@ -232,7 +232,7 @@ export const products = [
         colors: ["Grey"],
         price: 280,
         size: [],
-        category: ["Golf"],
+        category: ["Golf", "Equipment"],
     },
     {
         id: "performance_cart", 
@@ -252,7 +252,7 @@ export const products = [
         colors: ["Black"],
         price: 270,
         size: [],
-        category: ["Golf"],
+        category: ["Golf","Equipment"],
     },
     {
         id: "air_zoom_infinity_tour", 
@@ -272,7 +272,7 @@ export const products = [
         colors: ["Summit White"],
         price: 190,
         size: ["3.5","4","4.5","5","5.5","6","6.5","7","7.5","8","8.5","9","9.5","10","10.5","11","11.5","12","12.5","13","14","15","16"],
-        category: ["Golf"],
+        category: ["Golf","Shoes"],
     },
     {
         id: "pegasus_89", 
@@ -290,7 +290,7 @@ export const products = [
         colors: ["Summit White"],
         price: 140,
         size: ["3.5","4","4.5","5","5.5","6","6.5","7","7.5","8","8.5","9","9.5","10","10.5","11","11.5","12","12.5","13","14","15","16"],
-        category: ["Golf"],
+        category: ["Golf","Shoes"],
     },
     {
         id: "tech-fleece-windrunner",

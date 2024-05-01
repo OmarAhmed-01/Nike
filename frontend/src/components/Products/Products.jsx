@@ -50,7 +50,7 @@ const Products = () => {
       </div>
       <div className="product-right">
         <div className="product-details">
-          <h1>{product.label}</h1>
+          <h1>Nike {product.label}</h1>
           <h2>{product.desc}</h2>
           <p>${product.price}</p>
         </div>

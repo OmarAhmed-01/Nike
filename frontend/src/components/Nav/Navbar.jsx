@@ -14,7 +14,6 @@ const Navbar = ({ setShowLogin }) => {
             <Link to='/new'>New & Featured</Link>
             <Link to='/men'>Men</Link>
             <Link to='/women'>Women</Link>
-            <Link to='/kids'>Kids</Link>
             <Link to='/golf'>Golf</Link>
         </ul>
         <div className=' navbar-right'>
