@@ -45,6 +45,9 @@
 .navbar-right .cart-icon{
     width: 30px;
 }
+.navbar-right .fav-icon{
+    width: 30px;
+}
 .navbar-right .signIn-button{
     border: none;
     background: transparent;

@@ -23,6 +23,7 @@ import GolfApparels from './pages/Golf/GolfApparels';
 import GolfShoes from './pages/Golf/GolfShoes';
 import GolfEquipment from './pages/Golf/GolfEquipment';
 import GolfPros from './pages/Golf/GolfPros';
+import Fav from './pages/Fav/Fav';
 
 function App() {
 
@@ -57,6 +58,8 @@ function App() {
           <Route path='/w/golf-shoes' element={<GolfShoes/>}/>
           <Route path='/w/golf-accessories-equipment' element={<GolfEquipment/>}/>
           <Route path='/w/golf-pros' element={<GolfPros/>}/>
+          //======================================//
+          <Route path='/favourites' element={<Fav/>}/>
         </Routes>
         <Footer/>
       </div>

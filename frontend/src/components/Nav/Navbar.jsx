@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './navbar.css';
 import { assets } from '../../assets/assets';
 import { Link } from 'react-router-dom'
+import { StoreContext } from '../../context/StoreContext';
 
-const Navbar = ({ setShowLogin }) => {
+const Navbar = ({ setShowLogin }) => { 
 
   return (
     <div className=' navbar'>
@@ -25,6 +26,9 @@ const Navbar = ({ setShowLogin }) => {
             </form>
             <Link to='/cart'>
                 <img src={assets.cart} className=' cart-icon'/>
+            </Link>
+            <Link to='/favourites'>
+                <img src={assets.heart} className='fav-icon' alt="" />
             </Link>
             <button className=' signIn-button' onClick={() => setShowLogin(true)}>Sign in</button>
         </div>

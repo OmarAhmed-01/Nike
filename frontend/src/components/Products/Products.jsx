@@ -5,7 +5,7 @@ import { StoreContext } from "../../context/StoreContext";
 import { useParams } from "react-router-dom";
 
 const Products = () => {
-  const { products, addToCart, handleSize } = useContext(StoreContext);
+  const { products, addToCart, handleSize, addToFav } = useContext(StoreContext);
 
   const { Product_ID } = useParams();
   const product = products.find((item) => item.id === Product_ID);
@@ -75,7 +75,7 @@ const Products = () => {
             <span>Klarna</span>
           </p>
           <button className="add-button" onClick={() => addToCart(product.id)}>Add to Bag</button>
-          <button className="favourite-button">Favourite</button>
+          <button className="favourite-button" onClick={() => addToFav(product.id)}>Favourite</button>
         </div>
         <div className="shipping">
           <h1>Shipping</h1>

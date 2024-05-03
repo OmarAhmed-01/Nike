@@ -5,9 +5,17 @@ import { products_images, products } from '../assets/assets'
 
 const StoreContextProvider = (props) => {
 
+  const [favItem, setFavItem] = useState({});
   const [cartItem, setCartItems] = useState({});
   const [size, setSize] = useState("");
   const [category, setCategory] = useState("");
+
+  const addToFav = (itemId) => {
+    setFavItem((prev) => ({...prev, [itemId]: 1}));
+  }
+  const removeFav = (itemid) => {
+    setFavItem((prev) => ({...prev, [itemid]: prev[itemid] - 1}));
+  }
 
   const addToCart = (itemId) => {
     if (!cartItem[itemId]) {
@@ -96,6 +104,9 @@ const handleScrollRight = (ref) => {
     navigate('/w/golf-pros')
   }
   //====================================//
+  const handleFavClick = () => {
+    navigate('/favourites')
+  }
   const handleProductClick = (Product_ID) => {
     navigate(`/t/${Product_ID}`);
   }
@@ -129,7 +140,11 @@ const handleScrollRight = (ref) => {
     handleGolfApparel,
     handleGolfEquipment,
     handleGolfShoes,
-    handleGolfPros
+    handleGolfPros,
+    favItem,
+    addToFav,
+    removeFav,
+    handleFavClick
   }
 
   return (

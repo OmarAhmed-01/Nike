@@ -14,11 +14,11 @@ import redX from './redX.svg'
 import greyX from './greyX.svg'
 import shoppingBag from './shoppingBag.svg'
 import logo from './logo.svg'
-import cart from './cart.svg'
+import cart from './bag.png'
 import search from './search.svg'
 import crossIcon from './cross_icon.png'
 import header_img1 from './header_img1.png'
-import heart from './heart.svg'
+import heart from './heart.png'
 import trash from './trash.svg'
 
 //trending
