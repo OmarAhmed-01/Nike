@@ -24,6 +24,7 @@ import GolfShoes from './pages/Golf/GolfShoes';
 import GolfEquipment from './pages/Golf/GolfEquipment';
 import GolfPros from './pages/Golf/GolfPros';
 import Fav from './pages/Fav/Fav';
+import Shop from './pages/Shop/Shop';
 
 function App() {
 
@@ -38,6 +39,7 @@ function App() {
           <Route path='/' element={<Home/>}/>
           <Route path='/t/:Product_ID' element={<Products/>}/>
           <Route path='/cart' element={<Cart/>}/>
+          <Route path='/shop' element={<Shop/>}/>
           //======================================//
           <Route path='/men' element={<Men/>}/>
           <Route path='/w/men-shop' element={<MensShop/>}/>
