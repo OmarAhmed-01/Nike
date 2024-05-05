@@ -6,20 +6,20 @@ import { StoreContext } from '../../context/StoreContext'
 import Popular from '../../components/Popular/Popular'
 
 const Women = () => {
-    const {handleWomenClick, handleWomenClothes, handleWomenShoes, handleWomenAccess, handleWomenBras, handleScrollLeft, handleScrollRight } = useContext(StoreContext);
+    const { handleSubCategory, handleScrollLeft, handleScrollRight, handleShopClick } = useContext(StoreContext);
     const scrollRef = useRef(null);
   return (
     <div className='women-container'>
         <div className="title">
             <h1>Women</h1>
         </div>
-        <div className="heading" onClick={handleWomenClick}>
+        <div className="heading" onClick={() => handleShopClick("Women")}>
             <img src={assets.women_heading} alt="" />
             <div className='heading-details'>
                 <p>Step into the Unreal</p>
                 <h1>AIR MAX DN</h1>
                 <h2>The Dynamic Style of Jane Doe</h2>
-                <button onClick={handleWomenClick}>Shop Now</button>
+                <button onClick={() => handleShopClick("Women")}>Shop Now</button>
             </div>
         </div>
         <div className="essentials">
@@ -36,19 +36,19 @@ const Women = () => {
             </div>
             <div className="items" ref={scrollRef}>
                 <div className='clothing'>
-                    <img src={assets.women_clothing} onClick={handleWomenClothes} alt="" />
+                    <img src={assets.women_clothing} onClick={() => handleSubCategory("Women", "Clothing")} alt="" />
                     <p>Clothing</p>
                 </div>
                 <div className='shoes'>
-                    <img src={assets.women_shoes} onClick={handleWomenShoes} alt="" />
+                    <img src={assets.women_shoes} onClick={() => handleSubCategory("Women", "Shoes")} alt="" />
                     <p>Shoes</p>
                 </div>
                 <div className='accessories'>
-                    <img src={assets.women_accessories} onClick={handleWomenAccess} alt="" />
+                    <img src={assets.women_accessories} onClick={() => handleSubCategory("Women", "Accessories")} alt="" />
                     <p>Accessories</p>
                 </div>
                 <div className='bras'>
-                    <img src={assets.women_bras_leggings} onClick={handleWomenBras} alt="" />
+                    <img src={assets.women_bras_leggings} onClick={() => handleSubCategory("Women", "Bras")} alt="" />
                     <p>Bras & Leggings</p>
                 </div>
             </div>

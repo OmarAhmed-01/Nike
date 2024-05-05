@@ -8,7 +8,6 @@ const StoreContextProvider = (props) => {
   const [favItem, setFavItem] = useState({});
   const [cartItem, setCartItems] = useState({});
   const [size, setSize] = useState("");
-  const [category, setCategory] = useState("");
 
   const addToFav = (itemId) => {
     setFavItem((prev) => ({...prev, [itemId]: 1}));
@@ -59,51 +58,17 @@ const handleScrollRight = (ref) => {
 };
 
   const navigate = useNavigate();
-  const handleWomenClick = () =>{
-    navigate('/w/women-shop')
+
+  const handleSubCategory = (product_category, product_sub_category) => {
+    navigate(`/w/${product_category}/${product_sub_category}`)
   }
-  const handleWomenClothes = () => {
-    navigate('/w/women-clothes')
-  }
-  const handleWomenShoes = () => {
-    navigate('/w/women-shoes')
-  }
-  const handleWomenAccess = () => {
-    navigate('/w/women-access')
-  }
-  const handleWomenBras = () => {
-    navigate('/w/women-bras-leggings')
-  }
-  //====================================//
-  const handleMenShoes = () => {
-    navigate('/w/men-shoes');
-  }
-  const handleMenClothes = () => {
-    navigate('/w/men-clothes')
-  }
-  const handleMenAccess = () => {
-    navigate('/w/men-access')
-  }
-  const handleMenClick = () => {
-    navigate('/w/men-shop');
+  const handleShopClick = (product_category) => {
+    navigate(`/w/${product_category}`);
   }
   //====================================//
   const handleGolfClick = () => {
     navigate('/w/golf-and-lifestyle');
   }
-  const handleGolfApparel = () => {
-    navigate('/w/golf-clothing')
-  }
-  const handleGolfEquipment = () => {
-    navigate('/w/golf-accessories-equipment')
-  }
-  const handleGolfShoes = () => {
-    navigate('/w/golf-shoes')
-  }
-  const handleGolfPros = () => {
-    navigate('/w/golf-pros')
-  }
-  //====================================//
   const handleFavClick = () => {
     navigate('/favourites')
   }
@@ -128,23 +93,12 @@ const handleScrollRight = (ref) => {
     cartItem,
     size,
     handleSize,
-    handleMenClick,
-    handleMenClothes,
-    handleMenShoes,
-    handleMenAccess,
-    handleWomenClick,
-    handleWomenClothes,
-    handleWomenShoes,
-    handleWomenAccess,
-    handleWomenBras,
-    handleGolfApparel,
-    handleGolfEquipment,
-    handleGolfShoes,
-    handleGolfPros,
+    handleShopClick,
+    handleSubCategory,
     favItem,
     addToFav,
     removeFav,
-    handleFavClick
+    handleFavClick,
   }
 
   return (

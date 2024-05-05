@@ -6,19 +6,19 @@ import Popular from '../../components/Popular/Popular'
 
 const Golf = () => {
 
-    const { handleGolfClick, handleGolfApparel, handleGolfShoes, handleGolfPros, handleGolfEquipment } = useContext(StoreContext)
+    const { handleSubCategory, handleShopClick } = useContext(StoreContext)
     
   return (
     <div className='golf-container'>
         <div className="title">
             <h1>Golf</h1>
         </div>
-        <div className="heading" onClick={handleGolfClick}>
+        <div className="heading" onClick={() => handleShopClick("Golf")}>
             <img src={assets.golf_header} alt="" />
             <div className='heading-details'>
                 <h1>BROOK'S PICKS</h1>
                 <h2>Explore the latest must-haves handpicked by pro golfer Brooks Koepka --on and off course.</h2>
-                <button onClick={handleGolfClick}>Shop All</button>
+                <button onClick={() => handleShopClick("Golf")}>Shop All</button>
             </div>
         </div>
         <div className="essential">
@@ -29,21 +29,21 @@ const Golf = () => {
                 <div className="items-left">
                     <div className='golf-clothing'>
                         <p>Apparel</p>
-                        <button onClick={handleGolfApparel}>Shop</button>
+                        <button onClick={() => handleSubCategory("Golf", "Clothing")}>Shop</button>
                     </div>
                     <div className='golf-accessories'>
                         <p>Accessories & Equipment</p>
-                        <button onClick={handleGolfEquipment}>Shop</button>
+                        <button onClick={() => handleSubCategory("Golf", "Equipment")}>Shop</button>
                     </div>
                 </div>
                 <div className='items-right'>
                     <div className='footwear'>
                         <p>Footwear</p>
-                        <button onClick={handleGolfShoes}>Shop</button>
+                        <button onClick={() => handleSubCategory("Golf", "Shoes")}>Shop</button>
                     </div>
                     <div className='inspired'>
                         <p>Inspired by<br/>The Pros</p>
-                        <button onClick={handleGolfPros}>Shop</button>
+                        <button onClick={() => handleSubCategory("Golf", "Pro")}>Shop</button>
                     </div>
                 </div>  
             </div>

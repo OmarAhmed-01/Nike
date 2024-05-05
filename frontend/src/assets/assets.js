@@ -200,7 +200,8 @@ export const products = [
         colors: ["White", "Green", "Blue", "Black"],
         price: 32,
         size: ["S/M", "M/L", "L/XL"],
-        category: ["Golf", "Pro"],
+        category: ["Golf"],
+        subcategory: ["Pro"]
     },
     {
         id: "tour_classic_4", 
@@ -210,7 +211,8 @@ export const products = [
         colors: ["White"],
         price: 24,
         size: ["S", "M", "M/L", "L", "XL", "2XL"],
-        category:["Golf", "Pro"],
+        category:["Golf"],
+        subcategory: ["Pro"]
     },
     {
         id: "air_hybrid_2", 
@@ -232,7 +234,8 @@ export const products = [
         colors: ["Grey"],
         price: 280,
         size: [],
-        category: ["Golf", "Equipment"],
+        category: ["Golf"],
+        subcategory: ["Equipment"]
     },
     {
         id: "performance_cart", 
@@ -252,7 +255,8 @@ export const products = [
         colors: ["Black"],
         price: 270,
         size: [],
-        category: ["Golf","Equipment"],
+        category: ["Golf"],
+        subcategory: ["Equipment"]
     },
     {
         id: "air_zoom_infinity_tour", 
@@ -272,7 +276,8 @@ export const products = [
         colors: ["Summit White"],
         price: 190,
         size: ["3.5","4","4.5","5","5.5","6","6.5","7","7.5","8","8.5","9","9.5","10","10.5","11","11.5","12","12.5","13","14","15","16"],
-        category: ["Golf","Shoes"],
+        category: ["Golf"],
+        subcategory: ["Shoes"]
     },
     {
         id: "pegasus_89", 
@@ -290,7 +295,8 @@ export const products = [
         colors: ["Summit White"],
         price: 140,
         size: ["3.5","4","4.5","5","5.5","6","6.5","7","7.5","8","8.5","9","9.5","10","10.5","11","11.5","12","12.5","13","14","15","16"],
-        category: ["Golf","Shoes"],
+        category: ["Golf"],
+        subcategory: ["Shoes"]
     },
     {
         id: "tech-fleece-windrunner",
@@ -307,7 +313,8 @@ export const products = [
         colors: ["Blue", "White", "Black", "Red", "Off-White"],
         price: 145,
         size: ["XS", "S", "S Tall", "M", "M Tall", "L", "L Tall", "XL", "XL Tall", "XXL", "XXL Tall", "3XL", "3XL Tall", "4XL", "4XL Tall"],
-        category: ["Men", "Clothing"],
+        category: ["Men"],
+        subcategory: ["Clothing"]
     },
     {
         id: "air-force-one-1'07",
@@ -321,7 +328,8 @@ export const products = [
         colors: ["White", "Black"],
         price: 115,
         size: ["5","5.5","6","6.5","7","7.5","8","8.5","9","9.5","10","10.5","11","11.5","12","12.5","13","14","15","16","17","18"],
-        category: ["Men", "Women", "Shoes"],
+        category: ["Men", "Women"],
+        subcategory: ["Shoes"]
     },
     {
         id: "icon-air-force-one",
@@ -331,7 +339,8 @@ export const products = [
         colors: ["Black", "White", "Brown", "Blue", "Red"],
         price: 25,
         size: [],
-        category: ["Accessories", "Men", "Women" ],
+        category: ["Men", "Women" ],
+        subcategory: ["Accessories"]
     },
     {
         id: "one-convertible",
@@ -341,7 +350,8 @@ export const products = [
         colors: ["White", "Purple", "Black"],
         price: 45,
         size: ["XS", "S", "M", "L", "XL", "2XL"],
-        category: ["Women", "Bras"]
+        category: ["Women"],
+        subcategory: ["Bras"]
     },
     {
         id: "sportswear-phoenix-fleece",
@@ -351,7 +361,8 @@ export const products = [
         colors: [],
         price: 80,
         size: ["XS(0-2)", "S(4-6)", "M(8-10)", "L(12-14)", "XL(16-18)", "2XL(20-22)"],
-        category: ["Women", "Clothing"]
+        category: ["Women"],
+        subcategory: ["Clothing"]
     }
 ]
 export const trending = [
