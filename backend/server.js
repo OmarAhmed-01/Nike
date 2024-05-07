@@ -1,6 +1,7 @@
 import express from 'express'
 import cors from 'cors'
 import { Connect_Database } from './config/db.js'
+import productRouter from './routes/productRoute.js'
 
 //app config
 const app = express()
@@ -12,6 +13,10 @@ app.use(cors())
 
 //database connection
 Connect_Database();
+
+//api endpoints
+app.use("/products", productRouter)
+app.use("/images", express.static('uploads'))
 
 app.get("/", (req, res) => {
     res.send("API WORKING")
