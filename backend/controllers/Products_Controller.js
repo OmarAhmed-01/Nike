@@ -14,8 +14,8 @@ const add_product = async (req, res) => {
         subcategory: req.body.subcategory,
         size: req.body.size,
         colors: req.body.colors,
-        popular: req.body.popular,
-        new: req.body.new
+        // popular: req.body.popular,
+        // new: req.body.new
     })
 
     try {
