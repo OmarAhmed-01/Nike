@@ -4,9 +4,8 @@ import { assets } from '../../assets/assets'
 import axios from 'axios'
 import { toast } from 'react-toastify'
 
-const Add = () => {
+const Add = ({ url }) => {
 
-    const url = "http://localhost:4000";
     const [image, setImage] = useState([]);
     const [data, setData] = useState({
         label: "",
@@ -40,8 +39,6 @@ const Add = () => {
             formData.append(`img`, img); // Use the same field name for all images
         });
 
-        console.log(formData);
-
         const response = await axios.post(`${url}/products/add`, formData)
         if(response.data.success){
             setData({
@@ -57,6 +54,9 @@ const Add = () => {
             })
             setImage([])
             toast.success(response.data.message)
+        }
+        else{
+            toast.error(response.data.message)
         }
     }
 
