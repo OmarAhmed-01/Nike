@@ -3,13 +3,13 @@ import fs from 'fs'
 
 //add product item
 const add_product = async (req, res) => {
-    let image_filename = `${req.file.filename}`;
+    let image_filenames = req.files.map(file => file.filename);
 
     const product = new Product_Model({
         label: req.body.label,
         desc: req.body.desc,
         price: req.body.price,
-        img: image_filename,
+        img: image_filenames,
         category: req.body.category,
         subcategory: req.body.subcategory,
         size: req.body.size,

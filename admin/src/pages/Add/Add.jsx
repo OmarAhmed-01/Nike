@@ -7,7 +7,7 @@ import { toast } from 'react-toastify'
 const Add = () => {
 
     const url = "http://localhost:4000";
-    const [image, setImage] = useState(false);
+    const [image, setImage] = useState([]);
     const [data, setData] = useState({
         label: "",
         desc: "",
@@ -33,10 +33,14 @@ const Add = () => {
         formData.append("category", data.category)
         formData.append("subcategory", data.subcategory)
         formData.append("colors", JSON.stringify(colorsArray))
-        formData.append("size", data.sizes)
+        formData.append("size", JSON.stringify(sizesArray))
         // formData.append("popular", data.popular)
         // formData.append("new", data.new)
-        formData.append("img", image)
+        image.forEach((img) => {
+            formData.append(`img`, img); // Use the same field name for all images
+        });
+
+        console.log(formData);
 
         const response = await axios.post(`${url}/products/add`, formData)
         if(response.data.success){
@@ -51,12 +55,10 @@ const Add = () => {
                 // popular: "",
                 // new: ""
             })
-            setImage(false)
+            setImage([])
             toast.success(response.data.message)
         }
     }
-
-    
 
     const onChangeHandler = (event) => {
         const name = event.target.name;
@@ -64,10 +66,10 @@ const Add = () => {
 
         setData(data => ({ ...data, [name]: value }));
     }
-
+    
     useEffect(() => {
-        console.log(data);
-    }, [data])
+        console.log(image)
+    }, [image])
 
   return (
     <div className='add'>
@@ -77,9 +79,15 @@ const Add = () => {
                     <div className="add-img-upload flex-col">
                         <p>Upload image</p>
                         <label htmlFor="image">
-                            <img src={image ? URL.createObjectURL(image) :assets.upload_sign} alt="" />
+                            {
+                                image? (image.map((img, index) => (
+                                    <img key={index} src={URL.createObjectURL(img)} alt={`image ${index}`}/>
+                                    ))
+                                )
+                                : ( <img src={assets.upload_sign} alt='Upload'/>)
+                            }
                         </label>
-                        <input type="file" id='image' onChange={(e) => setImage(e.target.files[0])} hidden required />
+                        <input type="file" name='img' onChange={(e) => setImage(Array.from(e.target.files))} multiple accept='image/*' required />
                     </div>
                     <div className="add-product-name flex-col">
                         <p>Product Name</p>
@@ -125,7 +133,7 @@ const Add = () => {
                         </div>
                         <div className="add-sizes flex-col">
                             <p>Product Sizes</p>
-                            <input onChange={onChangeHandler} value={data.sizes} type="text" name='sizes' placeholder='XS'/>
+                            <input onChange={onChangeHandler} value={data.sizes} type="text" name='sizes' placeholder='XS, S, M, L'/>
                         </div>
                     </div>
                     <div className="add-popular-new flex-col">
