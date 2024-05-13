@@ -32,36 +32,3 @@
 .cursor{
     cursor: pointer;
 }
-::-webkit-scrollbar {
-    width: 4px;
-    height: 4px;
-}
-::-webkit-scrollbar-button {
-    width: 2px;
-    height: 2px;
-}
-::-webkit-scrollbar-thumb {
-    background: #9d9d9d;
-    border: 6px solid #d2d2d2;
-    border-radius: 50px;
-}
-::-webkit-scrollbar-thumb:hover {
-    background: #949494;
-}
-::-webkit-scrollbar-thumb:active {
-    background: #b12525;
-}
-::-webkit-scrollbar-track {
-    background: #666666;
-    border: 43px none #9b9b9b;
-    border-radius: 31px;
-}
-::-webkit-scrollbar-track:hover {
-    background: #666666;
-}
-::-webkit-scrollbar-track:active {
-    background: #333333;
-}
-::-webkit-scrollbar-corner {
-    background: transparent;
-}

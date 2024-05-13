@@ -42,8 +42,26 @@ const list_products = async (req, res) => {
 const remove_product = async (req, res) => {
     try {
         const product = await Product_Model.findById(req.body.id);
-        fs.unlink(`uploads/${product.img}`, () => {})
+        const images = product.img;
 
+        //delete each image asynchronously 
+        const deletePromise = images.map(async (img) => {
+            return new Promise ((resolve, reject) => {
+                fs.unlink(`uploads/${img}`, (err) => {
+                    if(err){
+                        reject(err)
+                    }
+                    else{
+                        resolve();
+                    }
+                })
+            })
+        });
+
+        //wait for all deletions to be completed
+        await Promise.all(deletePromise);
+
+        //once all images are deleted, delete the product from the database
         await Product_Model.findByIdAndDelete(req.body.id);
         res.json({success: true, message: "Product Removed"})
     } catch (error) {
