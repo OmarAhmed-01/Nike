@@ -35,35 +35,38 @@ const List = ({ url }) => {
 
   return (
     <div className='list add flex-col'>
-      <p>Products List</p>
-      <div className="list-table">
-        <div className="list-table-format title">
-          <b>Image</b>
-          <b>Name</b>
-          <b>Description</b>
-          <b>Category</b>
-          <b>SubCategory</b>
-          <b>Price</b>
-          <b>Colors</b>
-          <b>Sizes</b>
-          <b>Action</b>
+        <p className='title-p'>Products List</p>
+        <div className="list-table">
+            {list.length === 0 ? (
+                <p className='empty-products'>No Products</p>
+            ) : (
+                <div className="list-table-format title">
+                    <b className='image'>Image</b>
+                    <b>Name</b>
+                    <b>Description</b>
+                    <b>Category</b>
+                    <b>SubCategory</b>
+                    <b>Price</b>
+                    <b>Colors</b>
+                    <b>Sizes</b>
+                    <b>Action</b>
+                </div>
+            )}
+
+            {list.map((item, index) => (
+                <div className='list-table-format' key={index}>
+                    <img src={`${url}/images/` + item.img[0]} alt="" />
+                    <p>{item.label}</p>
+                    <p>{item.desc}</p>
+                    <p>{item.category}</p>
+                    <p>{item.subcategory}</p>
+                    <p>{item.price}</p>
+                    <p>{item.colors + " "}</p>
+                    <p>{item.size + " "}</p>
+                    <p onClick={() => removeFood(item._id)} className='cursor'>X</p>
+                </div>
+            ))}
         </div>
-        {list.map((item, index) => {
-          return(
-            <div className='list-table-format' key={index}>
-              <img src={`${url}/images/`+item.img[0]} alt="" />
-              <p>{item.label}</p>
-              <p>{item.desc}</p>
-              <p>{item.category}</p>
-              <p>{item.subcategory}</p>
-              <p>{item.price}</p>
-              <p>{item.colors + " "}</p>
-              <p>{item.size+" "}</p>
-              <p onClick={() => removeFood(item._id)} className='cursor'>X</p>
-            </div>
-          )
-        })}
-      </div>
     </div>
   )
 }
