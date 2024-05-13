@@ -43,3 +43,27 @@
     background-color: black;
     cursor: pointer;
 }
+@media (max-width: 900px) {
+    .details{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+    }
+    .form{
+        width: 80vw;
+    }
+    .details-right{
+        width: 100%;
+    }
+    .details-left{
+        width: 100%;
+    }
+    .add{
+        width: 100vw;
+        margin: 25px 0px;
+    }
+    input, textarea, p{
+        width: 100%;
+    }
+}

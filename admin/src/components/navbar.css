@@ -44,3 +44,9 @@
 .admin-details{
     display: flex;
 }
+
+@media (max-width: 900px) {
+    .navbar-container{
+        display: none;
+    }
+}
