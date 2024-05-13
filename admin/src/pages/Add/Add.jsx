@@ -21,6 +21,7 @@ const Add = ({ url }) => {
 
     const onSubmitHandler = async (event) => {
 
+        //split each item into an array
         const colorsArray = data.colors.split(",").map(color => color.trim());
         const sizesArray = data.sizes.split(',').map(size => size.trim());
 
@@ -31,8 +32,11 @@ const Add = ({ url }) => {
         formData.append("price", data.price)
         formData.append("category", data.category)
         formData.append("subcategory", data.subcategory)
-        formData.append("colors", JSON.stringify(colorsArray))
-        formData.append("size", JSON.stringify(sizesArray))
+
+        //append each item seperately
+        colorsArray.forEach(color=>formData.append("colors[]", color))
+        sizesArray.forEach(size=>formData.append("size[]", size))
+        
         // formData.append("popular", data.popular)
         // formData.append("new", data.new)
         image.forEach((img) => {

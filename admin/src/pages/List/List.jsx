@@ -57,8 +57,8 @@ const List = ({ url }) => {
               <p>{item.category}</p>
               <p>{item.subcategory}</p>
               <p>{item.price}</p>
-              <p>{item.colors}</p>
-              <p style={{overflowX: "scroll"}}>{item.size}</p>
+              <p>{item.colors + " "}</p>
+              <p style={{overflowX: "scroll"}}>{item.size+" "}</p>
               <p onClick={() => removeFood(item._id)} className='cursor'>X</p>
             </div>
           )
