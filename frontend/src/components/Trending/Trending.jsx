@@ -1,10 +1,9 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import './trending.css'
 import { assets, trending } from '../../assets/assets'
 
 const Trending = () => {
 
-    const [scrollPosition, setScrollPosition] = useState(0);
     const trendingRef = useRef(null);
 
     const handleScrollLeft = () => {
@@ -28,7 +27,9 @@ const Trending = () => {
   return (
     <div className=' trending-container'>
         <div className=' trending-title'>
-            <div className=' trending-title-title'>Trending</div>
+            <div className=' trending-title-title'>
+                <h1>Trending</h1>
+            </div>
             <div className=' trending-arrows'>
                 <div className='arrow-left' onClick={handleScrollLeft}>
                     <img src={assets.arrowLeft}/>
