@@ -102,4 +102,31 @@
     font-family: "Poppins", sans-serif;
 }
 
+@media (max-width: 900px) {
+    .popular-container .popular-title .popular-title-title{
+        padding: 0px 10px;
+        width: 60%;
+        display: flex;
+        align-items: center;
+    }
+    .popular-container .popular-title .popular-title-title h1{
+        font-size: 20px;
+        font-weight: 400;
+        width: 100%;
+    }
+    .popular-container .popular-title{
+        margin-bottom: 10px;
+    }
+    .popular-container .popular-title .popular-arrows{
+        padding: 0px 10px;
+    }
+    .popular-container .popular-cards .popular-list-item{
+        width: 50%;
+    }
+    .popular-container .popular-cards{
+        padding: 0px 10px;
+    }
+
+}
+
 
