@@ -100,3 +100,21 @@
 .navbar-right .search-bar input:hover{
     background-color: rgb(203, 203, 203);
 }
+.burger-menu{
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .burger-menu{
+        display: flex;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+    }
+    .navbar-menu{
+        display: none;
+    }
+    .navbar-right{
+        display: none;
+    }
+}

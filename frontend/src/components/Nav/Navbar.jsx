@@ -1,10 +1,18 @@
-import React, { useContext } from 'react';
+import React, { useEffect, useState } from 'react';
 import './navbar.css';
 import { assets } from '../../assets/assets';
 import { Link } from 'react-router-dom'
-import { StoreContext } from '../../context/StoreContext';
 
 const Navbar = ({ setShowLogin }) => { 
+
+    const [menuOpen, setMenuOpen] = useState(false);
+    const handleMenuChange = () => {
+        setMenuOpen(!menuOpen);
+    } 
+
+    useEffect(() => {
+        console.log(menuOpen)
+    }, [menuOpen])
 
   return (
     <div className=' navbar'>
@@ -32,6 +40,7 @@ const Navbar = ({ setShowLogin }) => {
             </Link>
             <button className=' signIn-button' onClick={() => setShowLogin(true)}>Sign in</button>
         </div>
+        <img className='burger-menu' onClick={handleMenuChange} src={assets.burgerMenu} alt="" />
     </div>
   )
 }

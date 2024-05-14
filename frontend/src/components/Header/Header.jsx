@@ -6,11 +6,11 @@ import { StoreContext } from '../../context/StoreContext'
 
 const Header = () => {
 
-  const { handleGolfClick } = useContext(StoreContext)
+  const { handleGolfClick, handleShopClick } = useContext(StoreContext)
 
   return (
     <div className=' header-container'>
-        <div className=' golf-section' onClick={handleGolfClick}>
+        <div className=' golf-section' onClick={() => handleShopClick("Golf")}>
             <img src={assets.header_img1} alt='header image'/>
             <div className=' golf-section-details'>
                 <p>Brook's Looks</p>

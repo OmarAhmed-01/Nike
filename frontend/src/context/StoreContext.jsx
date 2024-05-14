@@ -66,9 +66,9 @@ const handleScrollRight = (ref) => {
     navigate(`/w/${product_category}`);
   }
   //====================================//
-  const handleGolfClick = () => {
-    navigate('/w/golf-and-lifestyle');
-  }
+  // const handleGolfClick = () => {
+  //   navigate('/w/golf-and-lifestyle');
+  // }
   const handleFavClick = () => {
     navigate('/favourites')
   }
@@ -84,7 +84,7 @@ const handleScrollRight = (ref) => {
   const contextValue = {
     handleScrollLeft,
     handleScrollRight,
-    handleGolfClick,
+    // handleGolfClick,
     handleProductClick,
     products,
     addToCart,

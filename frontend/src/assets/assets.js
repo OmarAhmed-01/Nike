@@ -20,6 +20,8 @@ import crossIcon from './cross_icon.png'
 import header_img1 from './header_img1.png'
 import heart from './heart.png'
 import trash from './trash.svg'
+import burgerMenu from './burger.png'
+import close from './close.png'
 
 //trending
 import trending_img1 from './trending_img1.png'
@@ -185,7 +187,9 @@ export const assets =  {
     apparel,
     equipment,
     shoes,
-    background
+    background,
+    burgerMenu,
+    close
 };
 export const products_images = {
     tour_classic_4_front,
