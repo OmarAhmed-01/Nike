@@ -1,66 +1,128 @@
-import React, { useEffect, useState } from 'react';
-import './navbar.css';
-import { assets } from '../../assets/assets';
-import { Link, useLocation } from 'react-router-dom'
+import React, { useContext, useEffect, useState } from "react";
+import "./navbar.css";
+import { assets, products } from "../../assets/assets";
+import { Link, useLocation } from "react-router-dom";
+import { StoreContext } from "../../context/StoreContext";
 
-const Navbar = ({ setShowLogin }) => { 
+const Navbar = ({ setShowLogin }) => {
 
-    const location = useLocation();
-    const [menuOpen, setMenuOpen] = useState(false);
-    const handleMenuChange = () => {
-        setMenuOpen(!menuOpen);
-    } 
+  const location = useLocation();
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [search, setSearch] = useState("");
+  const [submittedValue, setSubmittedValue] = useState("");
+  const [isSearching, setIsSearching] = useState(false);
 
-    useEffect(() => {
-        setMenuOpen(false)
-    }, [location.pathname])
+  const { handleProductClick } = useContext(StoreContext);
+
+  const searchedProduct = products.filter((item) =>
+    item.label.includes(search)
+  );
+  
+  const handleMenuChange = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  const onSearchChange = (event) => {
+    setSearch(event.target.value);
+    console.log(search);
+  };
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    setSubmittedValue(search)
+    setIsSearching(!isSearching)
+  }
+
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [location.pathname]);
+
+  useEffect(() => {
+    setIsSearching(false);
+  }, [location.pathname]);
+
+  
 
   return (
-    <div className=' navbar'>
-        <Link to='/'>
-            <img src={assets.logo} className=' logo' alt='Nike Logo'/>
+    <>
+      <div className=" navbar">
+        <Link to="/">
+          <img src={assets.logo} className=" logo" alt="Nike Logo" />
         </Link>
-        <ul className=' navbar-menu'>
-            <Link to='/new'>New & Featured</Link>
-            <Link to='/men'>Men</Link>
-            <Link to='/women'>Women</Link>
-            <Link to='/golf'>Golf</Link>
+        <ul className=" navbar-menu">
+          <Link to="/new">New & Featured</Link>
+          <Link to="/men">Men</Link>
+          <Link to="/women">Women</Link>
+          <Link to="/golf">Golf</Link>
         </ul>
-        <div className=' navbar-right'>
-            <form className=' search-bar'>
-                <div className='search-icon'>
-                    <img src={assets.search}/>
-                </div>
-                <input type='text' placeholder='Search'/>
-            </form>
-            <Link to='/cart'>
-                <img src={assets.cart} className=' cart-icon'/>
-            </Link>
-            <Link to='/favourites'>
-                <img src={assets.heart} className='fav-icon' alt="" />
-            </Link>
-            <button className=' signIn-button' onClick={() => setShowLogin(true)}>Sign in</button>
-        </div>
-        <img className={menuOpen ? "closed" : "burger-menu"} onClick={handleMenuChange} src={assets.burgerMenu} alt="" />
-        <div className={menuOpen ? "menu" : "closed"}>
-            <img src={assets.close} onClick={handleMenuChange} alt="" />
-            <ul className="menu-lists">
-                <Link to='/new'>New & Featured</Link>
-                <Link to='/men'>Men</Link>
-                <Link to='/women'>Women</Link>
-                <Link to='/golf'>Golf</Link>
-            </ul>
-            <div className="extras">
-                <Link to='/cart'>
-                    <img src={assets.cart} className=' cart-icon'/>
-                </Link>
-                <Link to='/favourites'>
-                    <img src={assets.heart} className='fav-icon' alt="" />
-                </Link>
+        <div className=" navbar-right">
+          <form className=" search-bar" onSubmit={handleFormSubmit}>
+            <div className="search-icon">
+              <img src={assets.search} />
             </div>
+            <input
+              onChange={onSearchChange}
+              type="text"
+              placeholder="Search"
+            />
+          </form>
+          <Link to="/cart">
+            <img src={assets.cart} className=" cart-icon" />
+          </Link>
+          <Link to="/favourites">
+            <img src={assets.heart} className="fav-icon" alt="" />
+          </Link>
+          <button className=" signIn-button" onClick={() => setShowLogin(true)}>
+            Sign in
+          </button>
         </div>
-    </div>
-  )
-}
+        <img
+          className={menuOpen ? "closed" : "burger-menu"}
+          onClick={handleMenuChange}
+          src={assets.burgerMenu}
+          alt=""
+        />
+        <div className={menuOpen ? "menu" : "closed"}>
+          <img src={assets.close} onClick={handleMenuChange} alt="" />
+          <ul className="menu-lists">
+            <Link to="/new">New & Featured</Link>
+            <Link to="/men">Men</Link>
+            <Link to="/women">Women</Link>
+            <Link to="/golf">Golf</Link>
+          </ul>
+          <div className="extras">
+            <Link to="/cart">
+              <img src={assets.cart} className=" cart-icon" />
+            </Link>
+            <Link to="/favourites">
+              <img src={assets.heart} className="fav-icon" alt="" />
+            </Link>
+          </div>
+        </div>
+      </div>
+      {isSearching && search ? (
+        <div className="search">
+          <div className="filteredProducts">
+            {searchedProduct.map((item, index) => {
+              return (
+                <div key={index} className="list-item">
+                  <img src={item.img[0]} alt="" />
+                  <h1>Nike {item.label}</h1>
+                  <h2>{item.desc}</h2>
+                  <p>${item.price}</p>
+                  <button onClick={() => handleProductClick(item.id)}>
+                    Go to product
+                  </button>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      ) : (
+        <></>
+      )}
+    </>
+  );
+};
 
-export default Navbar
+export default Navbar;

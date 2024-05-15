@@ -111,6 +111,64 @@
 .closed{
     display: none;
 }
+.search{
+    background-color: rgb(222, 222, 222);
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.filteredProducts{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.filteredProducts .list-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    margin: 20px 0px;
+}
+.filteredProducts .list-item h1, .filteredProducts .list-item h2, .filteredProducts .list-item p{
+    text-align: start;
+    font-family: "Montserat", sans-serif;
+    color: black;
+}
+.filteredProducts .list-item h1{
+    width: 20%;
+    font-size: 16px;
+}
+.filteredProducts .list-item h2{
+    width: 20%;
+    font-size: 16px;
+    font-weight: 400;
+    color: #8a8a8a;
+}
+.filteredProducts .list-item p{
+    width: 5%;
+}
+.list-item img{
+    width: 80px;
+    border-radius: 10px;
+}
+.list-item button{
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    background-color: black;
+    color: white;
+    font-family: "Montserat", sans-serif;
+    cursor: pointer;
+}
+.list-item button:hover{
+    background-color: #8a8a8a;
+}
+
+
 @media (max-width: 900px) {
     .burger-menu{
         display: flex;
