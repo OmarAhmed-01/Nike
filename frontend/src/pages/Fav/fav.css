@@ -72,3 +72,36 @@
     font-family: "Poppins", sans-serif;
     font-weight: 500;
 }
+
+@media (max-width: 900px) {
+    .fav-wrapper .fav-container{
+        width: 100%;
+    }
+    .fav-container .items{
+        padding: 0px 10px;
+        margin-top: 20px;
+    }
+    .fav-wrapper h1{
+        font-size: 20px;
+    }
+    .name-desc h2{
+        font-size: 14px;
+        padding-left: 10px;
+    }
+    .name-desc p{
+        padding-left: 10px;
+        font-size: 14px;
+    }
+    .price p{
+        font-size: 14px;
+        padding-left: 20px;
+    }
+    .add-remove button{
+        font-size: 10px;
+        margin-left: 20px;
+    }
+    .add-remove{
+        gap: 10px;
+        justify-content: space-between;
+    }
+}

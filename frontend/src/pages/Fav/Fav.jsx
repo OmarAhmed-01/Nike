@@ -4,7 +4,7 @@ import { assets, products } from '../../assets/assets'
 import { StoreContext } from '../../context/StoreContext'
 
 const Fav = () => {
-    const { addToCart, favItem, removeFav, handleProductClick } = useContext(StoreContext)
+    const { favItem, removeFav, handleProductClick } = useContext(StoreContext)
   return (
     <div className="fav-wrapper">
         <h1>Favourites</h1>

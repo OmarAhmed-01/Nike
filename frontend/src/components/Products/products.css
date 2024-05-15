@@ -178,3 +178,27 @@
 .active{
     border: 1px solid black;
 }
+
+@media (max-width: 900px) {
+    .product-container{
+        display: flex;
+        flex-direction: column;
+        padding: 0px 10px;
+        height: auto;
+    }
+    .product-container .product-left{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .product-container .product-left .small-images{
+        display: flex;
+        flex-direction: row;
+        overflow-x: scroll;
+        width: 100%;
+    }
+    .product-container .product-right{
+        width: 100%;
+        overflow: unset;
+    }
+}

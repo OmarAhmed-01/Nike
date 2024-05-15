@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom';
 
 const Shop = () => {
 
-    const { handleProductClick, subcategory } = useContext(StoreContext);
+    const { handleProductClick } = useContext(StoreContext);
     const { product_category } = useParams();
     const { product_sub_category} = useParams();
     const filteredProducts = product_sub_category ?

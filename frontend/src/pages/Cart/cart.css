@@ -21,7 +21,6 @@
     gap: 10px;
     width: 100%;
     height: auto;
-    justify-content: space-between;
 }
 .cart-items-item .image{
     width: 150px;
@@ -34,10 +33,11 @@
 }
 .cart-items-item .details{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin-top: 20px;
     justify-content: space-between;
     margin-left: 30px;
+    width: 100%;
 }
 .cart-items-item .details img{
     width: 50px;
@@ -46,14 +46,16 @@
     display: flex;
     gap: 100px;
 }
-.cart-items-item .details .images{
+.cart-items-item .image-details .price .images{
     display: flex;
+    justify-content: end;
+    padding-right: 20px;
     gap: 20px;
-    height: 40px;
-    cursor: pointer;
 }
-.cart-items-item .details .images img{
+.cart-items-item .image-details .price .images img{
     width: 30px;
+    height: 30px;
+    cursor: pointer;
 }
 .cart-items-item .details .details-details{
     display: flex;
@@ -70,18 +72,18 @@
     font-family: "Poppins", sans-serif;
     
 }
-.cart-items-item .price{
-    margin-top: 20px;
+.details .price{
     width: 200px;
     text-align: end;
-    margin-right: 30px;
 }
-.cart-items-item .price p{
+.details .price p{
     font-family: "Poppins";
     font-size: 23px;
+    padding-right: 20px;
 }
 .cart-items-item .image-details{
     display: flex;
+    width: 100%;
 }
 .wrapper .product-container .right{
     width: 30%;
@@ -133,4 +135,60 @@
 .right .details .total p{
     font-family: "Poppins", sans-serif;
     font-weight: 500;
+}
+
+@media (max-width: 900px) {
+    .wrapper .product-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0px 10px;
+    }
+    .cart-items-item .image-details{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .cart-items-item .image-details .details{
+        flex-direction: column;
+    }
+    .wrapper .product-container .left{
+        width: 100%;
+    }
+    .wrapper .product-container .left .cart-items-item .image-details .image{
+        width: 50%;
+    }
+    .image-details .details{
+        width: 100%;
+        margin-left: 0px;
+    }
+    .cart-items-item .details .size-quantity{
+        justify-content: space-between;
+        gap: 0;
+    }
+    .details .price{
+        width: 100%;
+        margin-top: 5px;
+    }
+    .cart-items-item .image-details .price .images{
+        padding: 0;
+        justify-content: start;
+    }
+    .details .price p{
+        padding: 0;
+        text-align: start;
+    }
+    .wrapper .product-container .right{
+        width: 100%;
+        margin-top: 30px;
+    }
+    .wrapper .product-container .right h1{
+        width: 100%;
+    }
+    .right .details{
+        width: 100%;
+    }
+
 }

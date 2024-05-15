@@ -45,20 +45,3 @@ function App() {
 }
 
 export default App
-
-{/* <Route path='/w/golf-and-lifestyle' element={<GolfShop/>}/>
-<Route path='/w/golf-clothing' element={<GolfApparels/>}/>
-<Route path='/w/golf-shoes' element={<GolfShoes/>}/>
-<Route path='/w/golf-accessories-equipment' element={<GolfEquipment/>}/>
-<Route path='/w/golf-pros' element={<GolfPros/>}/>
-
-<Route path='/w/women-shop' element={<WomenShop/>}/>
-<Route path='/w/women-clothes' element={<WomenClothing/>}/>
-<Route path='/w/women-shoes' element={<WomenShoes/>}/>
-<Route path='/w/women-access' element={<WomenAccess/>}/>
-<Route path='/w/women-bras-leggings' element={<WomenBrasLeggings/>}/> 
-
-<Route path='/w/men-shop' element={<MensShop/>}/>
-<Route path='/w/men-clothes' element={<MenClothes/>}/>
-<Route path='/w/men-shoes' element={<MenShoes/>}/>
-<Route path='/w/men-access' element={<MenAccess/>}/> */}

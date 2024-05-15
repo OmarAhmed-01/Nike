@@ -85,10 +85,10 @@ const Products = () => {
         </div>
         <div className="desc">
           <p>{product.desc}</p>
-          <ul>
+          {/* <ul>
             <li>Shown: {product.colors.join("/")}</li>
             <li>Style: {product.id}</li>
-          </ul>
+          </ul> */}
         </div>
       </div>
     </div>

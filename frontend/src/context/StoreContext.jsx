@@ -1,7 +1,7 @@
 import { createContext, useContext, useState, useRef } from "react";
 import { useNavigate, useParams } from 'react-router-dom'
 export const StoreContext = createContext(null);
-import { products_images, products } from '../assets/assets'
+import { products } from '../assets/assets'
 
 const StoreContextProvider = (props) => {
 
@@ -84,7 +84,6 @@ const handleScrollRight = (ref) => {
   const contextValue = {
     handleScrollLeft,
     handleScrollRight,
-    // handleGolfClick,
     handleProductClick,
     products,
     addToCart,

@@ -54,3 +54,32 @@
     font-size: 20px;
     font-weight: 500;
 }
+
+@media (max-width: 900px) {
+    .shop-container .shop-products{
+        padding: 10px;
+    }
+    .shop-container .shop-products h1{
+        font-size: 20px;
+    }
+    .shop-container .shop-products .cart{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+        width: 100%;
+    }
+    .shop-container .shop-products .cart .list-items{
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .list-items img{
+        width: 100%;
+    }
+    .cart .list-items h1{
+        font-size: 18px;
+    }
+}
