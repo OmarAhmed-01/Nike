@@ -9,16 +9,43 @@ const Shop = () => {
     const { handleProductClick } = useContext(StoreContext);
     const { product_category } = useParams();
     const { product_sub_category} = useParams();
-    const filteredProducts = product_sub_category ?
-        products.filter(item => item.category.includes(product_category) && item.subcategory.includes(product_sub_category)) :
-        products.filter(item => item.category.includes(product_category));
+    // const filteredProducts = product_sub_category ?
+    //     products.filter(item => item.category.includes(product_category) && item.subcategory.includes(product_sub_category)) :
+    //     products.filter(item => item.category.includes(product_category));
 
-    console.log(filteredProducts);
+    let filteredProducts;
+    let shop_header;
+
+    if (product_category && product_sub_category){
+        filteredProducts = products.filter(item => item.category.includes(product_category) && item.subcategory.includes(product_sub_category))
+        const firstProduct = filteredProducts[0];
+        console.log(firstProduct);
+        if (firstProduct.category.length > 1){
+            shop_header = firstProduct.subcategory
+        }
+        else{
+            shop_header = firstProduct.category
+        }
+    }
+    else if(product_category){
+        filteredProducts = products.filter(item => item.category.includes(product_category))
+        const firstProduct = filteredProducts[0];
+        if (firstProduct.category.length > 1){
+            shop_header = firstProduct.subcategory
+        }
+        else{
+            shop_header = firstProduct.category
+        }
+    }
+    else{
+        filteredProducts = products;
+        shop_header = "All Products";
+    }
 
   return (
     <div className='shop-container'>
         <div className="shop-products">
-            <h1>Shop ({filteredProducts.length})</h1>
+            <h1>{`${shop_header} (${filteredProducts.length})`}</h1>
             <div className="cart">
                 {
                     filteredProducts.map((item, index) => {

@@ -54,6 +54,7 @@ const Navbar = ({ setShowLogin }) => {
           <Link to="/men">Men</Link>
           <Link to="/women">Women</Link>
           <Link to="/golf">Golf</Link>
+          <Link to="/shop">Shop</Link>
         </ul>
         <div className=" navbar-right">
           <form className=" search-bar" onSubmit={handleFormSubmit}>
@@ -89,6 +90,7 @@ const Navbar = ({ setShowLogin }) => {
             <Link to="/men">Men</Link>
             <Link to="/women">Women</Link>
             <Link to="/golf">Golf</Link>
+            <Link to="/shop">Shop</Link>
           </ul>
           <div className="extras">
             <Link to="/cart">

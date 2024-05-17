@@ -28,14 +28,11 @@ function App() {
           <Route path='/w/:product_category/:product_sub_category' element={<Shop/>}/>1
           <Route path='/w/:product_category' element={<Shop/>}/>
           <Route path='/cart' element={<Cart/>}/>
-          //======================================//
           <Route path='/men' element={<Men/>}/>
-          //======================================//
           <Route path='/women' element={<Women/>}/>
-          //======================================//
           <Route path='/golf' element={<Golf/>}/>
-          //======================================//
           <Route path='/favourites' element={<Fav/>}/>
+          <Route path='/shop' element={<Shop/>}/>
         </Routes>
         <Footer/>
       </div>
