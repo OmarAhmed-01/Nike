@@ -22,6 +22,9 @@ import heart from './heart.png'
 import trash from './trash.svg'
 import burgerMenu from './burger.png'
 import close from './close.png'
+import profile from './profile.png'
+import orders from './orders.png'
+import logout from './logout.png'
 
 //trending
 import trending_img1 from './trending_img1.png'
@@ -189,7 +192,10 @@ export const assets =  {
     shoes,
     background,
     burgerMenu,
-    close
+    close,
+    profile,
+    orders,
+    logout
 };
 export const products_images = {
     tour_classic_4_front,

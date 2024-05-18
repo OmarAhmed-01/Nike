@@ -8,6 +8,9 @@ const StoreContextProvider = (props) => {
   const [favItem, setFavItem] = useState({});
   const [cartItem, setCartItems] = useState({});
   const [size, setSize] = useState("");
+  const [token, setToken] = useState("");
+
+  const backend_url = "http://localhost:4000";
 
   const addToFav = (itemId) => {
     setFavItem((prev) => ({...prev, [itemId]: 1}));
@@ -98,6 +101,9 @@ const handleScrollRight = (ref) => {
     addToFav,
     removeFav,
     handleFavClick,
+    backend_url,
+    token,
+    setToken,
   }
 
   return (

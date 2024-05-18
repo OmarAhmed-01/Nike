@@ -1,6 +1,6 @@
 import userModel from "../models/UserModels.js";
 import jwt from 'jsonwebtoken';
-import bcrypt, { hash } from 'bcrypt'; //used to hash the plain text password
+import bcrypt from 'bcrypt'; //used to hash the plain text password
 import validator from 'validator'; //used to validate the form of the email
 import 'dotenv/config'
 

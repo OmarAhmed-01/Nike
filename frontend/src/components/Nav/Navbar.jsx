@@ -1,23 +1,30 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./navbar.css";
 import { assets, products } from "../../assets/assets";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { StoreContext } from "../../context/StoreContext";
 
 const Navbar = ({ setShowLogin }) => {
-
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
   const [search, setSearch] = useState("");
   const [submittedValue, setSubmittedValue] = useState("");
   const [isSearching, setIsSearching] = useState(false);
 
-  const { handleProductClick } = useContext(StoreContext);
+  const { handleProductClick, token, setToken } = useContext(StoreContext);
+
+  const navigate = useNavigate();
+
+  const logout = () => {
+    localStorage.removeItem("token");
+    setToken("");
+    navigate('/');
+  }
 
   const searchedProduct = products.filter((item) =>
     item.label.includes(search)
   );
-  
+
   const handleMenuChange = () => {
     setMenuOpen(!menuOpen);
   };
@@ -29,9 +36,9 @@ const Navbar = ({ setShowLogin }) => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    setSubmittedValue(search)
-    setIsSearching(!isSearching)
-  }
+    setSubmittedValue(search);
+    setIsSearching(!isSearching);
+  };
 
   useEffect(() => {
     setMenuOpen(false);
@@ -41,7 +48,11 @@ const Navbar = ({ setShowLogin }) => {
     setIsSearching(false);
   }, [location.pathname]);
 
-  
+  useEffect(() => {
+    if(localStorage.getItem("token")){
+      setToken(localStorage.getItem("token"))
+    }
+  }, []);
 
   return (
     <>
@@ -61,11 +72,7 @@ const Navbar = ({ setShowLogin }) => {
             <div className="search-icon">
               <img src={assets.search} />
             </div>
-            <input
-              onChange={onSearchChange}
-              type="text"
-              placeholder="Search"
-            />
+            <input onChange={onSearchChange} type="text" placeholder="Search" />
           </form>
           <Link to="/cart">
             <img src={assets.cart} className=" cart-icon" />
@@ -73,9 +80,22 @@ const Navbar = ({ setShowLogin }) => {
           <Link to="/favourites">
             <img src={assets.heart} className="fav-icon" alt="" />
           </Link>
-          <button className=" signIn-button" onClick={() => setShowLogin(true)}>
-            Sign in
-          </button>
+          {!token ? (
+            <button
+              className=" signIn-button"
+              onClick={() => setShowLogin(true)}
+            >
+              Sign in
+            </button>
+          ) : (
+            <div className="navbar-profile">
+              <img src={assets.profile} alt="" />
+              <ul className="navbar-drop-menu">
+                <li><img src={assets.orders} alt="" /><p>Orders</p></li>
+                <li onClick={logout}><img src={assets.logout} alt="" /><p>Logout</p></li>
+              </ul>
+            </div>
+          )}
         </div>
         <img
           className={menuOpen ? "closed" : "burger-menu"}
