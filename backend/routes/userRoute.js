@@ -4,6 +4,6 @@ import { loginUser, registerUser } from '../controllers/User_Controller.js' //im
 const userRouter = express.Router(); //creates a new express router object names userRouter
 
 userRouter.post('/register', registerUser); //send a post request to /register carrying the registerUser function
-userRouter.post('login', loginUser); //send a post request to /login carrying the loginUser function
+userRouter.post('/login', loginUser); //send a post request to /login carrying the loginUser function
 
 export default userRouter;
