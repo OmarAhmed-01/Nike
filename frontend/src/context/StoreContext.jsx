@@ -1,7 +1,8 @@
-import { createContext, useContext, useState, useRef } from "react";
+import { createContext, useContext, useState, useRef, useEffect } from "react";
 import { useNavigate, useParams } from 'react-router-dom'
+import axios from 'axios'
+
 export const StoreContext = createContext(null);
-import { products } from '../assets/assets'
 
 const StoreContextProvider = (props) => {
 
@@ -9,6 +10,7 @@ const StoreContextProvider = (props) => {
   const [cartItem, setCartItems] = useState({});
   const [size, setSize] = useState("");
   const [token, setToken] = useState("");
+  const [products, setProducts] = useState([]); //initialise the products with an empty array
 
   const backend_url = "http://localhost:4000";
 
@@ -49,16 +51,32 @@ const StoreContextProvider = (props) => {
         behavior: 'smooth' // Smooth scrolling
         });
     }
-};
+  };
 
-const handleScrollRight = (ref) => {
-    if (ref.current) {
-      ref.current.scrollTo({
-        left: ref.current.scrollLeft + 600, // Adjust the scroll distance as needed
-        behavior: 'smooth' // Smooth scrolling
-        });
+  const handleScrollRight = (ref) => {
+      if (ref.current) {
+        ref.current.scrollTo({
+          left: ref.current.scrollLeft + 600, // Adjust the scroll distance as needed
+          behavior: 'smooth' // Smooth scrolling
+          });
+      }
+  };
+
+  const fetch_products_list = async () => {
+    const response  = await axios.get(backend_url + "/api/products/list") //sets response as the data from GET request from /api/products/list
+    setProducts(response.data.data);
+  }
+
+  //when the page first loads creates a function called loadData which fetches the products list and sets the token as the token from the GET request
+  useEffect(() => {
+    async function loadData(){
+      await fetch_products_list();
+      if(localStorage.getItem("token")){
+        setToken(localStorage.getItem("token"))
+      }
     }
-};
+    loadData();
+  }, []);
 
   const navigate = useNavigate();
 
@@ -80,7 +98,6 @@ const handleScrollRight = (ref) => {
   }
   const handleSize = (newSize) => {
     setSize(newSize);
-    console.log(newSize);
   }
 
 

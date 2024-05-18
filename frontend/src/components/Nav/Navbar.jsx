@@ -48,12 +48,6 @@ const Navbar = ({ setShowLogin }) => {
     setIsSearching(false);
   }, [location.pathname]);
 
-  useEffect(() => {
-    if(localStorage.getItem("token")){
-      setToken(localStorage.getItem("token"))
-    }
-  }, []);
-
   return (
     <>
       <div className=" navbar">

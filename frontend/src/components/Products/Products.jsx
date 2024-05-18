@@ -1,16 +1,28 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./products.css";
-// import { products_images, products } from "../../assets/assets";
 import { StoreContext } from "../../context/StoreContext";
+import axios from "axios";
 import { useParams } from "react-router-dom";
 
 const Products = () => {
-  const { products, addToCart, handleSize, addToFav } = useContext(StoreContext);
-
+  const { products, addToCart, handleSize, addToFav, backend_url } = useContext(StoreContext);
+  const [product, setProduct] = useState(null);
+  const [bigImage, setBigImage] = useState(null);
   const { Product_ID } = useParams();
-  const product = products.find((item) => item.id === Product_ID);
 
-  const [bigImage, setBigImage] = useState(product.img[0]);
+  useEffect(() => {
+    const fetchProduct = async () => {
+      try {
+        const response = await axios.get(`${backend_url}/api/products/list`);
+        const productData = response.data.data.find(item => item._id === Product_ID);
+        setProduct(productData);
+        setBigImage(productData.img[0]);
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    fetchProduct();
+  }, [backend_url, Product_ID])
 
   const handleImageHover = (image) => {
     setBigImage(image);
@@ -25,27 +37,25 @@ const Products = () => {
   }
 
   return (
-    <div className="product-container" key={product.id}>
+    <div className="product-container" key={product._id}>
       <div className="product-left">
         <div className="small-images">
-          {/* Assuming you want to display the first image from the product */}
           {Array.isArray(product.img) ? (
             product.img.map((image, idx) => (
               <img
                 key={idx}
-                src={image}
+                src={`${backend_url}/images/${image}`}
                 alt={`Image ${idx + 1}`}
                 onMouseEnter={() => handleImageHover(image)}
                 className={image === bigImage ? "active" : ""}
               />
             ))
           ) : (
-            <img src={product.img} alt="Image" />
+            <img src={`${backend_url}/images/${product.img}`} alt="Image" />
           )}
         </div>
         <div className="big-image">
-          {/* Assuming you want to display the first image from the product */}
-          <img src={bigImage} alt="" />
+          <img src={`${backend_url}/images/${bigImage}`} alt="" />
         </div>
       </div>
       <div className="product-right">
@@ -85,10 +95,6 @@ const Products = () => {
         </div>
         <div className="desc">
           <p>{product.desc}</p>
-          {/* <ul>
-            <li>Shown: {product.colors.join("/")}</li>
-            <li>Style: {product.id}</li>
-          </ul> */}
         </div>
       </div>
     </div>

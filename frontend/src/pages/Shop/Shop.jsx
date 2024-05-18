@@ -1,17 +1,15 @@
 import React, { useContext } from 'react'
 import './shop.css'
-import { products } from '../../assets/assets';
 import { StoreContext } from '../../context/StoreContext';
 import { useParams } from 'react-router-dom';
 
 const Shop = () => {
 
+    const { products, backend_url } = useContext(StoreContext);
+
     const { handleProductClick } = useContext(StoreContext);
     const { product_category } = useParams();
     const { product_sub_category} = useParams();
-    // const filteredProducts = product_sub_category ?
-    //     products.filter(item => item.category.includes(product_category) && item.subcategory.includes(product_sub_category)) :
-    //     products.filter(item => item.category.includes(product_category));
 
     let filteredProducts;
     let shop_header;
@@ -50,8 +48,8 @@ const Shop = () => {
                 {
                     filteredProducts.map((item, index) => {
                         return(
-                            <div className="list-items" key={index} onClick={() => handleProductClick(item.id)}>
-                                <img src={item.img[0]} alt="" />
+                            <div className="list-items" key={index} onClick={() => handleProductClick(item._id)}>
+                                <img src={backend_url + "/images/" + item.img[0]} alt="" />
                                 <h1>Nike {item.label}</h1>
                                 <h2>{item.desc}</h2>
                                 <h3>{item.colors.length} Colors</h3>
