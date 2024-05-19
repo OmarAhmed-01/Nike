@@ -5,7 +5,8 @@ const userSchema = new mongoose.Schema({
     name: {type: String, required: true},
     email: {type: String, required: true},
     password: {type: String, required: true},
-    cartData: {type: Object, default:{}}
+    cartData: {type: Object, default:{}},
+    favData: {type: Object, default:{}}
 },{minimize:false});
 
 //Create a user model if it doesnt exist, otherwise use the model "user"
