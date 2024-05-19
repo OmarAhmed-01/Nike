@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react";
 import "./cart.css";
 import { StoreContext } from "../../context/StoreContext";
-import { assets, products } from "../../assets/assets";
+import { assets } from "../../assets/assets";
 
 const Cart = () => {
 
-  const { cartItem, removeFromCart, cartTotalAmount, size, addToFav } = useContext(StoreContext);
+  const { cartItem, removeFromCart, cartTotalAmount, size, addToFav, products, backend_url } = useContext(StoreContext);
 
   return (
     <div className=" wrapper">
@@ -13,12 +13,12 @@ const Cart = () => {
         <div className="left">
           <h1>Bag</h1>
           {products.map((item, index) => {
-            if (cartItem[item.id] > 0) {
+            if (cartItem[item._id] > 0) {
               return (
-                <div className="cart-items-item">
+                <div key={index} className="cart-items-item">
                   <div className=" image-details">
                     <div className=" image">
-                      <img src={item.img[0]} />
+                      <img src={backend_url + '/images/' + item.img[0]} />
                     </div>
                     <div className="details">
                       <div className=" details-details">
@@ -26,16 +26,16 @@ const Cart = () => {
                         <p>{item.category + ""}</p>
                         <div className=" size-quantity">
                           <p>Size {size}</p>
-                          <p>Quantity {cartItem[item.id]}</p>
+                          <p>Quantity {cartItem[item._id]}</p>
                         </div>
                       </div>
                       <div className="price">
                         <p>${item.price}</p>
                         <div className=" images">
-                          <img src={assets.heart} onClick={() => addToFav(item.id)} alt="" />
+                          <img src={assets.heart} onClick={() => addToFav(item._id)} alt="" />
                           <img
                             src={assets.trash}
-                            onClick={() => removeFromCart(item.id)}
+                            onClick={() => removeFromCart(item._id)}
                             alt=""
                           />
                         </div>

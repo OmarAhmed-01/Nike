@@ -33,7 +33,7 @@ const Products = () => {
   };
 
   if (!product) {
-    return <div>Product not found</div>;
+    return <div>Loading...</div>; // Render loading state while product data is being fetched
   }
 
   return (
