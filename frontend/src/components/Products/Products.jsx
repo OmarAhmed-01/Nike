@@ -84,8 +84,8 @@ const Products = () => {
             4 interest-free payments. Available for orders above $35.{" "}
             <span>Klarna</span>
           </p>
-          <button className="add-button" onClick={() => addToCart(product.id)}>Add to Bag</button>
-          <button className="favourite-button" onClick={() => addToFav(product.id)}>Favourite</button>
+          <button className="add-button" onClick={() => addToCart(product._id)}>Add to Bag</button>
+          <button className="favourite-button" onClick={() => addToFav(product._id)}>Favourite</button>
         </div>
         <div className="shipping">
           <h1>Shipping</h1>
