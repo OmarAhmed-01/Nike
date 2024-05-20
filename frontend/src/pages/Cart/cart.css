@@ -136,6 +136,27 @@
     font-family: "Poppins", sans-serif;
     font-weight: 500;
 }
+.checkout-btn{
+    width: 100%;
+}
+.checkout-btn button{
+    background-color: black;
+    color: white;
+    font-family: "Montserat", sans-serif;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 10px 0px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    cursor: pointer;
+}
+.checkout-btn button:hover{
+    background-color: rgb(126, 126, 126);
+}
 
 @media (max-width: 900px) {
     .wrapper .product-container{

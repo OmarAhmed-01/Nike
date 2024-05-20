@@ -119,6 +119,9 @@ const StoreContextProvider = (props) => {
   const handleFavClick = () => {
     navigate('/favourites')
   }
+  const handleCheckoutClick = () => {
+    navigate('/checkout');
+  }
   const handleProductClick = (Product_ID) => {
     navigate(`/t/${Product_ID}`);
   }
@@ -148,6 +151,7 @@ const StoreContextProvider = (props) => {
     backend_url,
     token,
     setToken,
+    handleCheckoutClick,
   }
 
   return (

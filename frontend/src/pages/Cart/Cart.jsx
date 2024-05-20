@@ -5,7 +5,7 @@ import { assets } from "../../assets/assets";
 
 const Cart = () => {
 
-  const { cartItem, removeFromCart, cartTotalAmount, size, addToFav, products, backend_url } = useContext(StoreContext);
+  const { cartItem, removeFromCart, cartTotalAmount, size, addToFav, products, backend_url, handleCheckoutClick } = useContext(StoreContext);
 
   return (
     <div className=" wrapper">
@@ -68,6 +68,9 @@ const Cart = () => {
               <p>${cartTotalAmount() === 0 ? 0 : cartTotalAmount() + 8}</p>
             </div>
             <hr />
+            <div className="checkout-btn">
+              <button onClick={handleCheckoutClick}>Checkout</button>
+            </div>
           </div>
         </div>
       </div>

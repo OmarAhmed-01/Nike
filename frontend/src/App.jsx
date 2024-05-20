@@ -11,6 +11,7 @@ import Men from './pages/Men/Men';
 import Women from './pages/Women/Women';
 import Fav from './pages/Fav/Fav';
 import Shop from './pages/Shop/Shop';
+import Checkout from './pages/Checkout/Checkout';
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
           <Route path='/golf' element={<Golf/>}/>
           <Route path='/favourites' element={<Fav/>}/>
           <Route path='/shop' element={<Shop/>}/>
+          <Route path='/checkout' element={<Checkout/>}/>
         </Routes>
         <Footer/>
       </div>
