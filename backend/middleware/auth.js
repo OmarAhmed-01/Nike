@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken'; //Import the jsonwebtoken library for handling JWTs (JSON Web Tokens)
 
 const authMiddleWare = async(req, res, next) => {
-    const { token } = req.headers; //Extract the 'token' from the request headers
+    const { token } = req.headers; 
 
     //If no token is provided, send a response indicating lack of authorization
     if(!token){

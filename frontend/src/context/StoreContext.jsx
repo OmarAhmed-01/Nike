@@ -14,11 +14,23 @@ const StoreContextProvider = (props) => {
 
   const backend_url = "http://localhost:4000";
 
-  const addToFav = (itemId) => {
-    setFavItem((prev) => ({...prev, [itemId]: 1}));
+  const addToFav = async(itemId) => {
+    console.log('Adding to fav:', itemId); // Debugging log
+    if(!favItem[itemId]){
+      setFavItem((prev) => ({...prev, [itemId]: 1}));
+    }
+    if(token){
+      await axios.post(backend_url + '/api/favourites/add-fav', {itemId}, {headers: {token}})
+    }
   }
-  const removeFav = (itemid) => {
+  useEffect(() => {
+  }, [favItem]);
+  const removeFav = async(itemid) => {
     setFavItem((prev) => ({...prev, [itemid]: prev[itemid] - 1}));
+    if(token){
+      await axios.post(backend_url + '/api/favourites/add-fav', {itemid}, {headers: {token}})
+    }
+    console.log(favItem)
   }
 
   const addToCart = async(itemId) => {
@@ -38,6 +50,11 @@ const StoreContextProvider = (props) => {
       await axios.post(backend_url + '/api/cart/remove', {itemId}, {headers: {token}})
     }
   };
+
+  const loadFavData = async(token) => {
+    const response = await axios.post(backend_url + '/api/favourites/details-fav', {}, {headers: {token}})
+    setFavItem(response.data.favData);
+  }
 
   const loadCartData = async(token) => {
     const response = await axios.post(backend_url + '/api/cart/cart-details', {}, {headers: {token}})
@@ -85,6 +102,7 @@ const StoreContextProvider = (props) => {
       if(localStorage.getItem("token")){
         setToken(localStorage.getItem("token"))
         await loadCartData(localStorage.getItem("token"));
+        await loadFavData(localStorage.getItem("token"))
       }
     }
     loadData();
@@ -123,6 +141,7 @@ const StoreContextProvider = (props) => {
     handleShopClick,
     handleSubCategory,
     favItem,
+    setFavItem,
     addToFav,
     removeFav,
     handleFavClick,
