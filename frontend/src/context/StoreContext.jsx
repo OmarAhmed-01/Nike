@@ -1,5 +1,5 @@
-import { createContext, useContext, useState, useRef, useEffect } from "react";
-import { useNavigate, useParams } from 'react-router-dom'
+import { createContext, useState, useEffect } from "react";
+import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
 export const StoreContext = createContext(null);
@@ -15,7 +15,6 @@ const StoreContextProvider = (props) => {
   const backend_url = "http://localhost:4000";
 
   const addToFav = async(itemId) => {
-    console.log('Adding to fav:', itemId); // Debugging log
     if(!favItem[itemId]){
       setFavItem((prev) => ({...prev, [itemId]: 1}));
     }
@@ -23,8 +22,7 @@ const StoreContextProvider = (props) => {
       await axios.post(backend_url + '/api/favourites/add-fav', {itemId}, {headers: {token}})
     }
   }
-  useEffect(() => {
-  }, [favItem]);
+  
   const removeFav = async(itemid) => {
     setFavItem((prev) => ({...prev, [itemid]: prev[itemid] - 1}));
     if(token){

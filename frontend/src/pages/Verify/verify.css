@@ -1,0 +1,21 @@
+body{
+    overflow-x: hidden;
+}
+.verify{
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    position: relative;
+    animation: move 3s;
+    animation-iteration-count: infinite;
+}
+.verify h1{
+    font-size: 3rem;
+    font-family: "Poppins", sans-serif;
+}
+
+@keyframes move {
+    from {left: 0%;}
+    to {left: 100%;}
+}

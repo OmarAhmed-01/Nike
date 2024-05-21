@@ -1,28 +1,75 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './checkout.css'
+import axios from 'axios'
+import { StoreContext} from '../../context/StoreContext.jsx'
+import { useNavigate } from 'react-router-dom'
 
 const Checkout = () => {
+
+    const { backend_url, products, cartItem, cartTotalAmount, token } = useContext(StoreContext);
+    const [data, setData] = useState({
+        FirstName: "",
+        LastName: "",
+        Email: "",
+        Address: "",
+        City: "",
+        Country: "",
+        Zipcode: "",
+        MobileNumber: "", 
+    })
+
+    const handleInputChange = (event) => {
+        const name = event.target.name;
+        const value = event.target.value;
+        setData(data => ({...data, [name]: value}))
+    }
+
+    const placeOrder = async (event) => {
+        event.preventDefault();
+        let orderItems = [];
+        products.map((item) => {
+            if(cartItem[item._id] > 0){
+                let item_info = item;
+                item_info["quantity"] = cartItem[item._id];
+                orderItems.push(item_info);
+            }
+        })
+        let orderData = {
+            address: data,
+            items: orderItems,
+            amount: cartTotalAmount() + 2,
+        }
+        let response = await axios.post(backend_url + '/api/orders/place-order', orderData, {headers: {token}});
+        if(response.data.success){
+            const { session_url } = response.data;
+            window.location.replace(session_url);
+        }
+        else{
+            alert("Error");
+        }
+    }
+
   return (
-    <form action="" className='place-order'>
+    <form onSubmit={placeOrder} className='place-order'>
         <div className="place-order-left">
             <p className="contact-info">Contact Details</p>
             <hr />
             <div className="names">
-                <input type="text" placeholder='First name'/>
-                <input type="text" placeholder='Last name'/>
+                <input type="text" name='FirstName' value={data.FirstName} onChange={handleInputChange} placeholder='First name'/>
+                <input type="text" name='LastName' value={data.LastName} onChange={handleInputChange} placeholder='Last name'/>
             </div>
             
-            <input type="email" placeholder='Email'/>
-            <input type="text" placeholder='Address'/>
+            <input type="email" name='Email' value={data.Email} onChange={handleInputChange} placeholder='Email'/>
+            <input type="text" name='Address' value={data.Address} onChange={handleInputChange} placeholder='Address'/>
 
             <div className="city">
-                <input type="text" placeholder='City'/>
-                <input type="text" placeholder='Country'/>
+                <input type="text" name='City' value={data.City} onChange={handleInputChange} placeholder='City'/>
+                <input type="text" name='Country' value={data.Country} onChange={handleInputChange} placeholder='Country'/>
             </div>
 
             <div className="mobile">
-                <input type="text" placeholder='Zipcode'/>
-                <input type="text" placeholder='Mobile number'/>
+                <input type="text" name='Zipcode' value={data.Zipcode} onChange={handleInputChange} placeholder='Zipcode'/>
+                <input type="text" name='MobileNumber' value={data.MobileNumber} onChange={handleInputChange} placeholder='Mobile number'/>
             </div>
         </div>
 
@@ -32,17 +79,17 @@ const Checkout = () => {
                 <hr />
                 <div className="cart-total-details">
                     <p>Subtotal</p>
-                    <p>$50</p>
+                    <p>${cartTotalAmount()}</p>
                 </div>
                 <hr />
                 <div className="cart-total-details">
                     <p>Delivery Fee</p>
-                    <p>$2</p>
+                    <p>${cartTotalAmount() === 0 ? 0:2}</p>
                 </div>
                 <hr />
                 <div className="cart-total-details">
                     <p>Total</p>
-                    <p>$52</p>
+                    <p>${cartTotalAmount() === 0 ? 0:cartTotalAmount() + 2}</p>
                 </div>
             </div>
             <button type='submit'>Proceed to payment</button>
