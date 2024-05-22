@@ -11,7 +11,7 @@ const Navbar = ({ setShowLogin }) => {
   const [submittedValue, setSubmittedValue] = useState("");
   const [isSearching, setIsSearching] = useState(false);
 
-  const { handleProductClick, token, setToken } = useContext(StoreContext);
+  const { handleProductClick, token, setToken, handleOrdersClick } = useContext(StoreContext);
 
   const navigate = useNavigate();
 
@@ -85,7 +85,7 @@ const Navbar = ({ setShowLogin }) => {
             <div className="navbar-profile">
               <img src={assets.profile} alt="" />
               <ul className="navbar-drop-menu">
-                <li><img src={assets.orders} alt="" /><p>Orders</p></li>
+                <li onClick={handleOrdersClick}><img src={assets.orders} alt="" /><p>Orders</p></li>
                 <li onClick={logout}><img src={assets.logout} alt="" /><p>Logout</p></li>
               </ul>
             </div>

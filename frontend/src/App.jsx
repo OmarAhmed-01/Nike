@@ -13,6 +13,7 @@ import Fav from './pages/Fav/Fav';
 import Shop from './pages/Shop/Shop';
 import Checkout from './pages/Checkout/Checkout';
 import Verify from './pages/Verify/Verify';
+import Orders from './pages/Orders/Orders';
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
           <Route path='/shop' element={<Shop/>}/>
           <Route path='/checkout' element={<Checkout/>}/>
           <Route path='/verify' element={<Verify/>}/>
+          <Route path='/orders' element={<Orders/>}/>
         </Routes>
         <Footer/>
       </div>

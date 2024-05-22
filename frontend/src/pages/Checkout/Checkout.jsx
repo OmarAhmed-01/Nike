@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom'
 const Checkout = () => {
 
     const { backend_url, products, cartItem, cartTotalAmount, token } = useContext(StoreContext);
+    const navigate = useNavigate();
     const [data, setData] = useState({
         FirstName: "",
         LastName: "",
@@ -47,6 +48,15 @@ const Checkout = () => {
         else{
             alert("Error");
         }
+
+        useEffect(() => {
+            if(!token){
+                navigate("/");
+            }
+            else if(cartTotalAmount() === 0){
+                navigate("/cart");
+            }
+        }, [token])
     }
 
   return (

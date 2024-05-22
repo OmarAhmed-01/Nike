@@ -126,6 +126,9 @@ const StoreContextProvider = (props) => {
   const handleSize = (newSize) => {
     setSize(newSize);
   }
+  const handleOrdersClick = () => {
+    navigate('/orders');
+  }
 
 
   const contextValue = {
@@ -150,6 +153,7 @@ const StoreContextProvider = (props) => {
     token,
     setToken,
     handleCheckoutClick,
+    handleOrdersClick,
   }
 
   return (
