@@ -15,10 +15,6 @@ const Navbar = () => {
     setMenuOpen(false)
   }, [location.pathname]);
 
-  useEffect(() => {
-    console.log(menuOpen)
-  }, [menuOpen]);
-
   return (
     <div className="navbar-container">
       <div className="logo">

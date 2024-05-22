@@ -4,7 +4,7 @@ import { assets } from '../../assets/assets'
 import axios from 'axios'
 import { toast } from 'react-toastify'
 
-const Add = ({ url }) => {
+const Add = ({ backend_url }) => {
 
     const [image, setImage] = useState([]);
     const [data, setData] = useState({
@@ -43,7 +43,7 @@ const Add = ({ url }) => {
             formData.append(`img`, img); // Use the same field name for all images
         });
 
-        const response = await axios.post(`${url}/products/add`, formData)
+        const response = await axios.post(`${backend_url}/products/add`, formData)
         if(response.data.success){
             setData({
                 label: "",

@@ -39,7 +39,7 @@ const Orders = () => {
                             <p>${orders.amount}.00</p>
                             <p>{orders.items.length < 2 ? `${orders.items.length} item` : `${orders.items.length} items`}</p>
                             <p>{`Status: ${orders.status}`}</p>
-                            <button>Check Status</button>
+                            <button onClick={fetchOrders}>Check Status</button>
                         </div>
                     )
                 })

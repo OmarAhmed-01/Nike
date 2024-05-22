@@ -31,7 +31,6 @@ const Navbar = ({ setShowLogin }) => {
 
   const onSearchChange = (event) => {
     setSearch(event.target.value);
-    console.log(search);
   };
 
   const handleFormSubmit = (e) => {

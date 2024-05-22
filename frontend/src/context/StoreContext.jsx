@@ -28,7 +28,6 @@ const StoreContextProvider = (props) => {
     if(token){
       await axios.post(backend_url + '/api/favourites/add-fav', {itemid}, {headers: {token}})
     }
-    console.log(favItem)
   }
 
   const addToCart = async(itemId) => {
