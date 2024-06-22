@@ -17,7 +17,6 @@ const Shop = () => {
     if (product_category && product_sub_category){
         filteredProducts = products.filter(item => item.category.includes(product_category) && item.subcategory.includes(product_sub_category))
         const firstProduct = filteredProducts[0];
-        console.log(firstProduct);
         if (firstProduct.category.length > 1){
             shop_header = firstProduct.subcategory
         }

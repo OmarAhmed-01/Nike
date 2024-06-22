@@ -5,13 +5,45 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { StoreContext } from "../../context/StoreContext";
 
 const Navbar = ({ setShowLogin }) => {
+
+  const { handleProductClick, token, setToken, handleOrdersClick, backend_url } = useContext(StoreContext);
+
+  const fetchUsers = async () => {
+    try {
+      // Retrieve the token from localStorage
+      const token = localStorage.getItem("token");
+  
+      // Check if the token exists
+      if (!token) {
+        console.error("No token found");
+        return; // Exit the function if no token is found
+      }
+  
+      // Make the GET request with the token in the headers
+      const response = await axios.get(backend_url + "/api/users/users", {
+        headers: {
+          Authorization: `Bearer ${token}`, // Include the token in the 'Authorization' header
+        },
+      });
+  
+      // Log the response data
+      console.log(response.data);
+    } catch (error) {
+      console.error("Error fetching users:", error);
+    }
+  };
+  
+  // Call fetchUsers when the component mounts
+  useEffect(() => {
+    fetchUsers();
+  }, []);
+
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
   const [search, setSearch] = useState("");
   const [submittedValue, setSubmittedValue] = useState("");
   const [isSearching, setIsSearching] = useState(false);
 
-  const { handleProductClick, token, setToken, handleOrdersClick } = useContext(StoreContext);
 
   const navigate = useNavigate();
 
