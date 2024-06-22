@@ -12,7 +12,7 @@ const StoreContextProvider = (props) => {
   const [token, setToken] = useState("");
   const [products, setProducts] = useState([]); //initialise the products with an empty array
 
-  const backend_url = "http://localhost:4000";
+  const backend_url = "https://nike-backend-0vzd.onrender.com";
 
   const addToFav = async(itemId) => {
     if(!favItem[itemId]){

@@ -9,7 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
 
-  const backend_url = "http://localhost:4000";
+  const backend_url = "https://nike-backend-0vzd.onrender.com";
 
   return (
     <div>
